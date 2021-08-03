@@ -1,7 +1,7 @@
 Concatenate elements of a list 'x' of multiple integers to a single integer,"sum(d * 10 ** i for i, d in enumerate(x[::-1]))","{'x': ['list[int]']}",<class 'int'>
 convert a list of integers into a single integer,"r = int(''.join(map(str, x)))","{'x': ['list[int]']}",<class 'int'>
 convert a DateTime string back to a DateTime object of format '%Y-%m-%d %H:%M:%S.%f',"datetime.datetime.strptime('2010-11-13 10:33:54.227806', '%Y-%m-%d %H:%M:%S.%f')",{},<class 'datetime.datetime'>
-get the average of a list values for each key in dictionary `d`),"[(i, sum(j) / len(j)) for i, j in list(d.items())]","{'d': ['int-dict']}",<class 'list'>,
+get the average of a list values for each key in dictionary `d`),"[(i, sum(j) / len(j)) for i, j in list(d.items())]","{'d': ['int-dict']}",<class 'list'>
 "zip two lists `[1, 2]` and `[3, 4]` into a list of two tuples containing elements at the same index in each list","zip([1, 2], [3, 4])",{},<class 'zip'>
 prepend string 'hello' to all items in list 'a',['hello{0}'.format(i) for i in a],"{'a': ['list[int]', 'list[str]', 'list[bool]']}",<class 'list'>
 regex for repeating words in a string `s`,"re.sub('(?<!\\S)((\\S+)(?:\\s+\\2))(?:\\s+\\2)+(?!\\S)', '\\1', s)","{'s': ['str', 'int-str']}",<class 'str'>
@@ -78,7 +78,7 @@ Get all the keys from dictionary `y` whose value is `1`,[i for i in y if y[i] ==
 converting byte string `c` in unicode string,c.decode('unicode_escape'),"{'c': ['bytestr']}",<class 'str'>
 "add key ""item3"" and value ""3"" to dictionary `default_data `",default_data['item3'] = 3,"{'default_data': ['dict']}",<class 'int'>
 "add key ""item3"" and value ""3"" to dictionary `default_data `","default_data.update({'item3': 3, })","{'default_data': ['dict']}",<class 'NoneType'>
-"add key value pairs 'item4' , 4 and 'item5' , 5 to dictionary `default_data`","default_data.update({'item4': 4, 'item5': 5, })","{'default_data': ['dict']}",<class 'NoneType'>,
+"add key value pairs 'item4' , 4 and 'item5' , 5 to dictionary `default_data`","default_data.update({'item4': 4, 'item5': 5, })","{'default_data': ['dict']}",<class 'NoneType'>
 Get the first and last 3 elements of list `l`,l[:3] + l[-3:],"{'l': ['list[int]', 'list[str]', 'list[bool]']}",<class 'str'>
 "For each index `x` from 0 to 3, append the element at index `x` of list `b` to the list at index `x` of list a.",[a[x].append(b[x]) for x in range(3)],"{'a': ['list[int]', 'list[str]', 'list[bool]'], 'b': ['list[int]', 'list[str]', 'list[bool]']}",<class 'list'>
 add character '@' after word 'get' in string `text`,"text = re.sub('(\\bget\\b)', '\\1@', text)","{'text': ['str', 'int-str']}",<class 'str'>
@@ -1206,7 +1206,7 @@ print 'here is your checkmark: ' plus unicode character u'\u2713',('here is your
 print unicode characters in a string `\u0420\u043e\u0441\u0441\u0438\u044f`,('\u0420\u043e\u0441\u0441\u0438\u044f'),{},<class 'str'>
 pads string '5' on the left with 1 zero,('{0}'.format('5'.zfill(2))),{},<class 'str'>
 Remove duplicates elements from list `sequences` and sort it in ascending order,sorted(set(itertools.chain.from_iterable(sequences))),"{'sequences': ['list[str]']}",<class 'list'>
-escaping quotes in string,"replace('""', '\\""')",{},<class 'str'>,
+escaping quotes in string,"replace('""', '\\""')",{},<class 'str'>
 check if all string elements in list `words` are upper-cased,(all(word[0].isupper() for word in words)),"{'words': ['list[str]']}",<class 'bool'>
 remove items from dictionary `myDict` if the item's value `val` is equal to 42,"myDict = {key: val for key, val in list(myDict.items()) if val != 42}","{'myDict': ['dict']}",<class 'dict'>
 Remove all items from a dictionary `myDict` whose values are `42`,"{key: val for key, val in list(myDict.items()) if val != 42}","{'myDict': ['dict']}",<class 'dict'>
