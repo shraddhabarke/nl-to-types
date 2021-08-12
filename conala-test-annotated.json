@@ -1,0 +1,1740 @@
+[
+    {
+      "intent": "Decode Hex String in Python 3",
+      "rewritten_intent": "decode a hex string '4a4b4c' to UTF-8.",
+      "snippet": "bytes.fromhex('4a4b4c').decode('utf-8')",
+      "model_solution": "print(4a4b4c.decode('4a4b4c'))",
+      "question_id": 3283984
+    },
+    {
+      "intent": "check if all elements in a list are identical",
+      "rewritten_intent": "check if all elements in list `myList` are identical",
+      "snippet": "all(x == myList[0] for x in myList)",
+      "model_solution": "[i for i in myList if i == 2]",
+      "question_id": 3844801
+    },
+    {
+      "intent": "Format string dynamically",
+      "rewritten_intent": "format number of spaces between strings `Python`, `:` and `Very Good` to be `20`",
+      "snippet": "print('%*s : %*s' % (20, 'Python', 20, 'Very Good'))",
+      "model_solution": "\"\"\" \"\"\".join(str(x) for x in str(Python))",
+      "question_id": 4302166
+    },
+    {
+      "intent": "How I can get rid of None values in dictionary?",
+      "rewritten_intent": "get rid of None values in dictionary `kwargs`",
+      "snippet": "res = {k: v for k, v in list(kwargs.items()) if v is not None}",
+      "model_solution": "list(kwargs.values())",
+      "question_id": 2544710
+    },
+    {
+      "intent": "How I can get rid of None values in dictionary?",
+      "rewritten_intent": "get rid of None values in dictionary `kwargs`",
+      "snippet": "res = dict((k, v) for k, v in kwargs.items() if v is not None)",
+      "model_solution": "list(kwargs.values())",
+      "question_id": 2544710
+    },
+    {
+      "intent": "splitting and concatenating a string",
+      "rewritten_intent": "concatenate a list of strings `['a', 'b', 'c']`",
+      "snippet": "\"\"\"\"\"\".join(['a', 'b', 'c'])",
+      "model_solution": "\"\"\"\"\"\".join([['a', 'b', 'c']])",
+      "question_id": 6726636
+    },
+    {
+      "intent": "Python -Remove Time from Datetime String",
+      "rewritten_intent": "Format a datetime string `when` to extract date only",
+      "snippet": "then = datetime.datetime.strptime(when, '%Y-%m-%d').date()",
+      "model_solution": "when.strftime('%m/%d/%Y')",
+      "question_id": 26153795
+    },
+    {
+      "intent": "How do I split a multi-line string into multiple lines?",
+      "rewritten_intent": "split a multi-line string `inputString` into separate strings",
+      "snippet": "inputString.split('\\n')",
+      "model_solution": "[s.split(' ') for s in inputString.split(',')]",
+      "question_id": 172439
+    },
+    {
+      "intent": "How do I split a multi-line string into multiple lines?",
+      "rewritten_intent": "Split a multi-line string ` a \\n b \\r\\n c ` by new line character `\\n`",
+      "snippet": "' a \\n b \\r\\n c '.split('\\n')",
+      "model_solution": "re.split('\n', 'a \n b \r\n c')",
+      "question_id": 172439
+    },
+    {
+      "intent": "How to join mixed list (array) (with integers in it) in Python?",
+      "rewritten_intent": "concatenate elements of list `b` by a colon \":\"",
+      "snippet": "\"\"\":\"\"\".join(str(x) for x in b)",
+      "model_solution": "[''.join(x) for x in b]",
+      "question_id": 13954222
+    },
+    {
+      "intent": "Python printing without commas",
+      "rewritten_intent": "concatenate items of list `l` with a space ' '",
+      "snippet": "print(' '.join(map(str, l)))",
+      "model_solution": "list(map(tuple, []))",
+      "question_id": 13550423
+    },
+    {
+      "intent": "How can I parse a time string containing milliseconds in it with python?",
+      "rewritten_intent": null,
+      "snippet": "time.strptime('30/03/09 16:31:32.123', '%d/%m/%y %H:%M:%S.%f')",
+      "model_solution": "print(time.mktime(datetime.datetime.fromtimestamp(time).timetuple()))",
+      "question_id": 698223
+    },
+    {
+      "intent": "How can I convert a string with dot and comma into a float number in Python",
+      "rewritten_intent": "convert a string `my_string` with dot and comma into a float number `my_float`",
+      "snippet": "my_float = float(my_string.replace(',', ''))",
+      "model_solution": "float(my_string.split(',')[0])",
+      "question_id": 6633523
+    },
+    {
+      "intent": "How can I convert a string with dot and comma into a float number in Python",
+      "rewritten_intent": "convert a string `123,456.908` with dot and comma into a floating number",
+      "snippet": "float('123,456.908'.replace(',', ''))",
+      "model_solution": "print(', '.join(map(str, 123,456.908)))",
+      "question_id": 6633523
+    },
+    {
+      "intent": "Determining the unmatched portion of a string using a regex in Python",
+      "rewritten_intent": "split string 'Words, words, words.' using a regex '(\\\\W+)'",
+      "snippet": "re.split('(\\\\W+)', 'Words, words, words.')",
+      "question_id": 2195340
+    },
+    {
+      "intent": "Remove key from dictionary in Python returning new dictionary",
+      "rewritten_intent": "remove key 'c' from dictionary `d`",
+      "snippet": "{i: d[i] for i in d if i != 'c'}",
+      "model_solution": "d.pop('c', None)",
+      "question_id": 17665809
+    },
+    {
+      "intent": "Python regular expression split() string",
+      "rewritten_intent": "Split a string `s` by space with `4` splits",
+      "snippet": "s.split(' ', 4)",
+      "model_solution": "re.findall(' ', '4')",
+      "question_id": 10697757
+    },
+    {
+      "intent": "Python: Cut off the last word of a sentence?",
+      "rewritten_intent": "cut off the last word of a sentence `content`",
+      "snippet": "\"\"\" \"\"\".join(content.split(' ')[:-1])",
+      "model_solution": "re.sub(' ', '\\1Bull', content)",
+      "question_id": 6266727
+    },
+    {
+      "intent": "Finding the sum of a nested list of ints",
+      "rewritten_intent": "sum all elements of nested list `L`",
+      "snippet": "sum(sum(i) if isinstance(i, list) else i for i in L)",
+      "model_solution": "sum(L)",
+      "question_id": 15856127
+    },
+    {
+      "intent": "Python: Perform an operation on each dictionary value",
+      "rewritten_intent": "Multiple each value by `2` for all keys in a dictionary `my_dict`",
+      "snippet": "my_dict.update((x, y * 2) for x, y in list(my_dict.items()))",
+      "model_solution": "map(dict, zip(*[[(k, v) for k, v in my_dict.items()] for v in list(my_dict.values())]))",
+      "question_id": 5010536
+    },
+    {
+      "intent": "How would you make a comma-separated string from a list?",
+      "rewritten_intent": "Join elements of list `l` with a comma `,`",
+      "snippet": "\"\"\",\"\"\".join(l)",
+      "model_solution": "[x for x in l if x not in [',', ',']]",
+      "question_id": 44778
+    },
+    {
+      "intent": "How would you make a comma-separated string from a list?",
+      "rewritten_intent": "make a comma-separated string from a list `myList`",
+      "snippet": "myList = ','.join(map(str, myList))",
+      "model_solution": "[', '.join(map(str, row)) for row in myList]",
+      "question_id": 44778
+    },
+    {
+      "intent": "Print a list in reverse order with range()?",
+      "rewritten_intent": "reverse the list that contains 1 to 10",
+      "snippet": "list(reversed(list(range(10))))",
+      "model_solution": "all(i in j for i in range(10))",
+      "question_id": 7286365
+    },
+    {
+      "intent": "How can i subtract two strings in python?",
+      "rewritten_intent": "remove substring 'bag,' from a string 'lamp, bag, mirror'",
+      "snippet": "print('lamp, bag, mirror'.replace('bag,', ''))",
+      "model_solution": "\"\"\"lamp, bag, mirror\"\"\".replace('bag,', '')",
+      "question_id": 18454570
+    },
+    {
+      "intent": "python reverse tokens in a string",
+      "rewritten_intent": "Reverse the order of words, delimited by `.`, in string `s`",
+      "snippet": "\"\"\".\"\"\".join(s.split('.')[::-1])",
+      "model_solution": "\"\"\"\"\"\".join(sorted(s.split(), key=lambda t: t[0], reverse=True))",
+      "question_id": 4357787
+    },
+    {
+      "intent": "converting epoch time with milliseconds to datetime",
+      "rewritten_intent": "convert epoch time represented as milliseconds `s` to string using format '%Y-%m-%d %H:%M:%S.%f'",
+      "snippet": "datetime.datetime.fromtimestamp(s).strftime('%Y-%m-%d %H:%M:%S.%f')",
+      "model_solution": "time.strftime('%Y-%m-%d %H:%M:%S.%f', '%Y-%m-%d %H:%M:%S.%f'.format(s))",
+      "question_id": 21787496
+    },
+    {
+      "intent": "converting epoch time with milliseconds to datetime",
+      "rewritten_intent": "parse milliseconds epoch time '1236472051807' to format '%Y-%m-%d %H:%M:%S'",
+      "snippet": "time.strftime('%Y-%m-%d %H:%M:%S', time.gmtime(1236472051807 / 1000.0))",
+      "model_solution": "time.strftime('%Y-%m-%d %H:%M:%S')",
+      "question_id": 21787496
+    },
+    {
+      "intent": "Getting the date of 7 days ago from current date in python",
+      "rewritten_intent": "get the date 7 days before the current date",
+      "snippet": "(datetime.datetime.now() - datetime.timedelta(days=7)).date()",
+      "question_id": 20573459
+    },
+    {
+      "intent": "How can I sum a column of a list?",
+      "rewritten_intent": "sum elements at index `column` of each list in list `data`",
+      "snippet": "print(sum(row[column] for row in data))",
+      "model_solution": "sum(sum(x) for x in data)",
+      "question_id": 15352457
+    },
+    {
+      "intent": "How can I sum a column of a list?",
+      "rewritten_intent": "sum columns of a list `array`",
+      "snippet": "[sum(row[i] for row in array) for i in range(len(array[0]))]",
+      "model_solution": "sum(sum(x) for x in array)",
+      "question_id": 15352457
+    },
+    {
+      "intent": "How to encode text to base64 in python",
+      "rewritten_intent": "encode binary string 'your string' to base64 code",
+      "snippet": "base64.b64encode(bytes('your string', 'utf-8'))",
+      "model_solution": "hex(int('your string', 2))",
+      "question_id": 23164058
+    },
+    {
+      "intent": "How can I combine dictionaries with the same keys in python?",
+      "rewritten_intent": "combine list of dictionaries `dicts` with the same keys in each list to a single dictionary",
+      "snippet": "dict((k, [d[k] for d in dicts]) for k in dicts[0])",
+      "model_solution": "dict((k, 'k') for d in dicts for k, v in list(d.items()))",
+      "question_id": 11533274
+    },
+    {
+      "intent": "How can I combine dictionaries with the same keys in python?",
+      "rewritten_intent": "Merge a nested dictionary `dicts` into a flat dictionary by concatenating nested values with the same key `k`",
+      "snippet": "{k: [d[k] for d in dicts] for k in dicts[0]}",
+      "model_solution": "dict((k, v) for k, v in dicts.items() if v)",
+      "question_id": 11533274
+    },
+    {
+      "intent": "Identify duplicate values in a list in Python",
+      "rewritten_intent": "identify duplicate values in list `mylist`",
+      "snippet": "[k for k, v in list(collections.Counter(mylist).items()) if v > 1]",
+      "model_solution": "[i for i, j in enumerate(mylist) if i]",
+      "question_id": 11236006
+    },
+    {
+      "intent": "Flattening a shallow list in Python",
+      "rewritten_intent": "flatten list `list_of_menuitems`",
+      "snippet": "[image for menuitem in list_of_menuitems for image in menuitem]",
+      "model_solution": "list_of_menuitems = [i[0] for i in list_of_menuitems]",
+      "question_id": 406121
+    },
+    {
+      "intent": "Append elements of a set to a list in Python",
+      "rewritten_intent": "append elements of a set `b` to a list `a`",
+      "snippet": "a.extend(b)",
+      "model_solution": "a.write('\n'.join(b))",
+      "question_id": 4741537
+    },
+    {
+      "intent": "Append elements of a set to a list in Python",
+      "rewritten_intent": null,
+      "snippet": "a.extend(list(b))",
+      "model_solution": "[[] for i in range(2)]",
+      "question_id": 4741537
+    },
+    {
+      "intent": "how to get the last part of a string before a certain character?",
+      "rewritten_intent": "Split a string `x` by last occurrence of character `-`",
+      "snippet": "print(x.rpartition('-')[0])",
+      "model_solution": "\"\"\"-\"\"\".split('-')",
+      "question_id": 15851568
+    },
+    {
+      "intent": "how to get the last part of a string before a certain character?",
+      "rewritten_intent": "get the last part of a string before the character '-'",
+      "snippet": "print(x.rsplit('-', 1)[0])",
+      "model_solution": "\"\"\"\"\"\".join(re.findall('<unk>', str))",
+      "question_id": 15851568
+    },
+    {
+      "intent": "How to print an entire list while not starting by the first item",
+      "rewritten_intent": "print a list `l` and move first 3 elements to the end of the list",
+      "snippet": "print(l[3:] + l[:3])",
+      "question_id": 34280147
+    },
+    {
+      "intent": "Create random list of integers in Python",
+      "rewritten_intent": "create a random list of integers",
+      "snippet": "[int(1000 * random.random()) for i in range(10000)]",
+      "question_id": 4172131
+    },
+    {
+      "intent": "Using %f with strftime() in Python to get microseconds",
+      "rewritten_intent": null,
+      "snippet": "datetime.datetime.now().strftime('%H:%M:%S.%f')",
+      "question_id": 6677332
+    },
+    {
+      "intent": "Convert list of lists to list of integers",
+      "rewritten_intent": "convert list of lists `L` to list of integers",
+      "snippet": "[int(''.join(str(d) for d in x)) for x in L]",
+      "model_solution": "[int(i) for i in L]",
+      "question_id": 18524642
+    },
+    {
+      "intent": "Convert list of lists to list of integers",
+      "rewritten_intent": "combine elements of each list in list `L` into digits of a single integer",
+      "snippet": "[''.join(str(d) for d in x) for x in L]",
+      "model_solution": "map(int, [1, 2, 3])",
+      "question_id": 18524642
+    },
+    {
+      "intent": "Convert list of lists to list of integers",
+      "rewritten_intent": "convert a list of lists `L` to list of integers",
+      "snippet": "L = [int(''.join([str(y) for y in x])) for x in L]",
+      "model_solution": "[map(int, sublist) for sublist in L]",
+      "question_id": 18524642
+    },
+    {
+      "intent": "Removing an element from a list based on a predicate",
+      "rewritten_intent": "removing an element from a list based on a predicate 'X' or 'N'",
+      "snippet": "[x for x in ['AAT', 'XAC', 'ANT', 'TTA'] if 'X' not in x and 'N' not in x]",
+      "model_solution": "[type(x) for x in zip(*my_list)]",
+      "question_id": 1866343
+    },
+    {
+      "intent": "Python match string if it does not start with X",
+      "rewritten_intent": "search for string that matches regular expression pattern '(?<!Distillr)\\\\\\\\AcroTray\\\\.exe' in string 'C:\\\\SomeDir\\\\AcroTray.exe'",
+      "snippet": "re.search('(?<!Distillr)\\\\\\\\AcroTray\\\\.exe', 'C:\\\\SomeDir\\\\AcroTray.exe')",
+      "question_id": 15534223
+    },
+    {
+      "intent": "String to list in Python",
+      "rewritten_intent": "split string 'QH QD JC KD JS' into a list on white spaces",
+      "snippet": "\"\"\"QH QD JC KD JS\"\"\".split()",
+      "model_solution": "re.match('<unk>', 'QH QD JC KD JS').split(' ')",
+      "question_id": 5453026
+    },
+    {
+      "intent": "how to convert a string date into datetime format in python?",
+      "rewritten_intent": "convert a string into datetime using the format '%Y-%m-%d %H:%M:%S.%f'",
+      "snippet": "datetime.datetime.strptime(string_date, '%Y-%m-%d %H:%M:%S.%f')",
+      "model_solution": "datetime.strptime('%Y-%m-%d %H:%M:%S.%f', '%Y-%m-%d %H:%M:%S.%f')",
+      "question_id": 19068269
+    },
+    {
+      "intent": "What's the fastest way to locate a list element within a list in python?",
+      "rewritten_intent": "find the index of a list with the first element equal to '332' within the list of lists `thelist`",
+      "snippet": "[index for index, item in enumerate(thelist) if item[0] == '332']",
+      "model_solution": "[x for x in thelist if x[0] == 1]",
+      "question_id": 20683167
+    },
+    {
+      "intent": "Python: trying to lower a string and remove non-alphanumeric characters aside from space",
+      "rewritten_intent": "lower a string `text` and remove non-alphanumeric characters aside from space",
+      "snippet": "re.sub('[^\\\\sa-zA-Z0-9]', '', text).lower().strip()",
+      "question_id": 30693804
+    },
+    {
+      "intent": "Python: trying to lower a string and remove non-alphanumeric characters aside from space",
+      "rewritten_intent": "remove all non-alphanumeric characters except space from a string `text` and lower it",
+      "snippet": "re.sub('(?!\\\\s)[\\\\W_]', '', text).lower().strip()",
+      "question_id": 30693804
+    },
+    {
+      "intent": "Looping over a list in Python",
+      "rewritten_intent": "loop over a list `mylist` if sublists length equals 3",
+      "snippet": "[x for x in mylist if len(x) == 3]",
+      "model_solution": "[item for item in mylist if len(item) == 1]",
+      "question_id": 9138112
+    },
+    {
+      "intent": "insert variable values into a string in python",
+      "rewritten_intent": "use `%s` operator to print variable values `str1` inside a string",
+      "snippet": "'first string is: %s, second one is: %s' % (str1, 'geo.tif')",
+      "model_solution": "print('<unk> %s, <unk>' % (str1, str1))",
+      "question_id": 3367288
+    },
+    {
+      "intent": "Split a string by a delimiter in python",
+      "rewritten_intent": null,
+      "snippet": "[x.strip() for x in '2.MATCHES $$TEXT$$ STRING'.split('$$TEXT$$')]",
+      "model_solution": "\"\"\"\"\"\".join(re.findall('<unk>', s))",
+      "question_id": 3475251
+    },
+    {
+      "intent": "Replace a substring when it is a separate word",
+      "rewritten_intent": "Replace a separate word 'H3' by 'H1' in a string 'text'",
+      "snippet": "re.sub('\\\\bH3\\\\b', 'H1', text)",
+      "question_id": 18785032
+    },
+    {
+      "intent": "Python: removing characters except digits from string",
+      "rewritten_intent": "substitute ASCII letters in string 'aas30dsa20' with empty string ''",
+      "snippet": "re.sub('\\\\D', '', 'aas30dsa20')",
+      "model_solution": "\"\"\"\"\"\".join(map(chr, int('')))",
+      "question_id": 1450897
+    },
+    {
+      "intent": "Python: removing characters except digits from string",
+      "rewritten_intent": "get digits only from a string `aas30dsa20` using lambda function",
+      "snippet": "\"\"\"\"\"\".join([x for x in 'aas30dsa20' if x.isdigit()])",
+      "model_solution": "print([''.join(c for c in aas30dsa20 if c.isdigit()) for c in aas30dsa20])",
+      "question_id": 1450897
+    },
+    {
+      "intent": "count the occurrences of a list item",
+      "rewritten_intent": "count the occurrences of item \"a\" in list `l`",
+      "snippet": "l.count('a')",
+      "model_solution": "sum(a == a for a in l)",
+      "question_id": 2600191
+    },
+    {
+      "intent": "count the occurrences of a list item",
+      "rewritten_intent": "count the occurrences of items in list `l`",
+      "snippet": "Counter(l)",
+      "model_solution": "sum(tuple(x) for x in l)",
+      "question_id": 2600191
+    },
+    {
+      "intent": "count the occurrences of a list item",
+      "rewritten_intent": "count the occurrences of items in list `l`",
+      "snippet": "[[x, l.count(x)] for x in set(l)]",
+      "model_solution": "sum(tuple(x) for x in l)",
+      "question_id": 2600191
+    },
+    {
+      "intent": "count the occurrences of a list item",
+      "rewritten_intent": "count the occurrences of items in list `l`",
+      "snippet": "dict(((x, l.count(x)) for x in set(l)))",
+      "model_solution": "sum(tuple(x) for x in l)",
+      "question_id": 2600191
+    },
+    {
+      "intent": "count the occurrences of a list item",
+      "rewritten_intent": "count the occurrences of item \"b\" in list `l`",
+      "snippet": "l.count('b')",
+      "model_solution": "sum(a == b for a in l)",
+      "question_id": 2600191
+    },
+    {
+      "intent": "Efficient way to find the largest key in a dictionary with non-zero value",
+      "rewritten_intent": "find the key associated with the largest value in dictionary `x` whilst key is non-zero value",
+      "snippet": "max(k for k, v in x.items() if v != 0)",
+      "model_solution": "max((k, v) for k, v in x.items())",
+      "question_id": 1555968
+    },
+    {
+      "intent": "Efficient way to find the largest key in a dictionary with non-zero value",
+      "rewritten_intent": "get the largest key whose not associated with value of 0 in dictionary `x`",
+      "snippet": "(k for k, v in x.items() if v != 0)",
+      "model_solution": "max(abs(x) for x in list(x.values()) if x[0] != 0)",
+      "question_id": 1555968
+    },
+    {
+      "intent": "Efficient way to find the largest key in a dictionary with non-zero value",
+      "rewritten_intent": "get the largest key in a dictionary `x` with non-zero value",
+      "snippet": "max(k for k, v in x.items() if v != 0)",
+      "model_solution": "max(tuple(list(x.items())) for x in list(x.values()))",
+      "question_id": 1555968
+    },
+    {
+      "intent": "python: Is this a wrong way to remove an element from a dict?",
+      "rewritten_intent": "remove key 'ele' from dictionary `d`",
+      "snippet": "del d['ele']",
+      "model_solution": "d.pop('ele', None)",
+      "question_id": 4175686
+    },
+    {
+      "intent": "How to merge multiple lists into one list in python?",
+      "rewritten_intent": "merge list `['it']` and list `['was']` and list `['annoying']` into one list",
+      "snippet": "['it'] + ['was'] + ['annoying']",
+      "model_solution": "[list(t) for t in zip([['it']], [['was']], [\"['annoying']\", 'str_3'])]",
+      "question_id": 11574195
+    },
+    {
+      "intent": "How to increment a value with leading zeroes?",
+      "rewritten_intent": "increment a value with leading zeroes in a number `x`",
+      "snippet": "str(int(x) + 1).zfill(len(x))",
+      "model_solution": "np.sum(1 for i in range(100))",
+      "question_id": 587647
+    },
+    {
+      "intent": "Convert tuple to list",
+      "rewritten_intent": "Convert tuple `t` to list",
+      "snippet": "list(t)",
+      "model_solution": "t = list(t)",
+      "question_id": 16296643
+    },
+    {
+      "intent": "Convert tuple to list",
+      "rewritten_intent": "Convert list `t` to tuple",
+      "snippet": "tuple(l)",
+      "model_solution": "map(list, zip(*t))",
+      "question_id": 16296643
+    },
+    {
+      "intent": "Convert tuple to list and back",
+      "rewritten_intent": "Convert tuple `level1` to list",
+      "snippet": "level1 = map(list, level1)",
+      "model_solution": "level1 = list(level1)",
+      "question_id": 16296643
+    },
+    {
+      "intent": "Splitting a string with repeated characters into a list using regex",
+      "rewritten_intent": "split a string `s` with into all strings of repeated characters",
+      "snippet": "[m.group(0) for m in re.finditer('(\\\\d)\\\\1*', s)]",
+      "question_id": 22882922
+    },
+    {
+      "intent": "Generic reverse of list items in Python",
+      "rewritten_intent": "Get reverse of list items from list 'b' using extended slicing",
+      "snippet": "[x[::-1] for x in b]",
+      "model_solution": "[i for i, j in enumerate(b) if i != 1]",
+      "question_id": 4685571
+    },
+    {
+      "intent": "How to convert a list of longs into a comma separated string in python",
+      "rewritten_intent": "convert list `list_of_ints` into a comma separated string",
+      "snippet": "\"\"\",\"\"\".join([str(i) for i in list_of_ints])",
+      "model_solution": "\"\"\",\"\"\".join(str(i) for i in list_of_ints)",
+      "question_id": 438684
+    },
+    {
+      "intent": "Find last occurrence of character",
+      "rewritten_intent": "Find last occurrence of character '}' in string \"abcd}def}\"",
+      "snippet": "'abcd}def}'.rfind('}')",
+      "model_solution": "re.findall('<unk>', 'abcd}def}')[-1].replace('}', '}')",
+      "question_id": 26443308
+    },
+    {
+      "intent": "Ending with a for loop in python",
+      "rewritten_intent": "Iterate ove list `[1, 2, 3]` using list comprehension",
+      "snippet": "print([item for item in [1, 2, 3]])",
+      "question_id": 22365172
+    },
+    {
+      "intent": "transpose dictionary (extract all the values for one key from a list of dictionaries)",
+      "rewritten_intent": "extract all the values with keys 'x' and 'y' from a list of dictionaries `d` to list of tuples",
+      "snippet": "[(x['x'], x['y']) for x in d]",
+      "model_solution": "[d['x'] for d in d if 'y' in d]",
+      "question_id": 12300912
+    },
+    {
+      "intent": "Make dictionary from list with python",
+      "rewritten_intent": "create a dictionary by adding each two adjacent elements in tuple `x` as key/value pair to it",
+      "snippet": "dict(x[i:i + 2] for i in range(0, len(x), 2))",
+      "model_solution": "dict((k, v) for k, v in x.items() if v == 1)",
+      "question_id": 2597166
+    },
+    {
+      "intent": "Merging a list of lists",
+      "rewritten_intent": "create a list containing flattened list `[['A', 'B', 'C'], ['D', 'E', 'F'], ['G', 'H', 'I']]`",
+      "snippet": "values = sum([['A', 'B', 'C'], ['D', 'E', 'F'], ['G', 'H', 'I']], [])",
+      "model_solution": "[1, 2, 3]",
+      "question_id": 7895449
+    },
+    {
+      "intent": "Mapping a string into a list of pairs",
+      "rewritten_intent": "create a list containing each two adjacent letters in string `word` as its elements",
+      "snippet": "[(x + y) for x, y in zip(word, word[1:])]",
+      "model_solution": "[''.join(x) for x in zip(bin, word[1:])]",
+      "question_id": 41923858
+    },
+    {
+      "intent": "Mapping a string into a list of pairs",
+      "rewritten_intent": "Get a list of pairs from a string `word` using lambda function",
+      "snippet": "list(map(lambda x, y: x + y, word[:-1], word[1:]))",
+      "model_solution": "[x[0] for x in word.split(',')]",
+      "question_id": 41923858
+    },
+    {
+      "intent": "How do you extract a url from a string using python?",
+      "rewritten_intent": "extract a url from a string `myString`",
+      "snippet": "print(re.findall('(https?://[^\\\\s]+)', myString))",
+      "question_id": 9760588
+    },
+    {
+      "intent": "How do you extract a url from a string using python?",
+      "rewritten_intent": "extract a url from a string `myString`",
+      "snippet": "print(re.search('(?P<url>https?://[^\\\\s]+)', myString).group('url'))",
+      "question_id": 9760588
+    },
+    {
+      "intent": "Remove all special characters, punctuation and spaces from string",
+      "rewritten_intent": "remove all special characters, punctuation and spaces from a string `mystring` using regex",
+      "snippet": "re.sub('[^A-Za-z0-9]+', '', mystring)",
+      "question_id": 5843518
+    },
+    {
+      "intent": "How do I replace whitespaces with underscore and vice versa?",
+      "rewritten_intent": "replace spaces with underscore",
+      "snippet": "mystring.replace(' ', '_')",
+      "model_solution": "\"\"\" \"\"\".join(x.strip() or x.isdigit() for x in re.sub('[\\W_]+', '', para).split(' '))",
+      "question_id": 1007481
+    },
+   
+    {
+      "intent": "Is there a string-collapse library function in python?",
+      "rewritten_intent": "split string `my_string` on white spaces",
+      "snippet": "\"\"\" \"\"\".join(my_string.split())",
+      "model_solution": "my_string.split(' ')",
+      "question_id": 1249786
+    },
+    {
+      "intent": "How to sum elements in functional way",
+      "rewritten_intent": "get a list containing the sum of each element `i` in list `l` plus the previous elements",
+      "snippet": "[sum(l[:i]) for i, _ in enumerate(l)]",
+      "model_solution": "[i for i in l if i in l]",
+      "question_id": 13728486
+    },
+    {
+      "intent": "Python Regex Split Keeps Split Pattern Characters",
+      "rewritten_intent": "split a string `Docs/src/Scripts/temp` by `/` keeping `/` in the result",
+      "snippet": "\"\"\"Docs/src/Scripts/temp\"\"\".replace('/', '/\\x00/').split('\\x00')",
+      "model_solution": "re.split('/', 'Docs/src/Scripts/temp')",
+      "question_id": 9743134
+    },
+    {
+      "intent": "True for all characters of a string",
+      "rewritten_intent": "check characters of string `string` are true predication of function `predicate`",
+      "snippet": "all(predicate(x) for x in string)",
+      "model_solution": "string.isdigit()",
+      "question_id": 14858916
+    },
+    {
+      "intent": "How to convert a string list into an integer in python",
+      "rewritten_intent": "convert string `user_input` into a list of integers `user_list`",
+      "snippet": "user_list = [int(number) for number in user_input.split(',')]",
+      "model_solution": "user_list = [int(x) for x in user_input.split()]",
+      "question_id": 6378889
+    },
+    {
+      "intent": "How to convert a string list into an integer in python",
+      "rewritten_intent": "Get a list of integers by splitting  a string `user` with comma",
+      "snippet": "[int(s) for s in user.split(',')]",
+      "model_solution": "list(user.split())",
+      "question_id": 6378889
+    },
+    {
+      "intent": "Sorting a Python list by two criteria",
+      "rewritten_intent": null,
+      "snippet": "sorted(list, key=lambda x: (x[0], -x[1]))",
+      "model_solution": "sorted(l, key=lambda x: x[1])",
+      "question_id": 5212870
+    },
+    {
+      "intent": "How to sort a list of objects , based on an attribute of the objects?",
+      "rewritten_intent": "sort a list of objects `ut`, based on a function `cmpfun` in descending order",
+      "snippet": "ut.sort(key=cmpfun, reverse=True)",
+      "model_solution": "ut.sort(key=operator.attrgetter('cmpfun'))",
+      "question_id": 403421
+    },
+    {
+      "intent": "How to sort a list of objects , based on an attribute of the objects?",
+      "rewritten_intent": "reverse list `ut` based on the `count` attribute of each object",
+      "snippet": "ut.sort(key=lambda x: x.count, reverse=True)",
+      "model_solution": "ut.sort(key=lambda x: x.count)",
+      "question_id": 403421
+    },
+    {
+      "intent": "How to sort a list of objects , based on an attribute of the objects?",
+      "rewritten_intent": "sort a list of objects `ut` in reverse order by their `count` property",
+      "snippet": "ut.sort(key=lambda x: x.count, reverse=True)",
+      "model_solution": "sorted(ut, key=operator.attrgetter('count'))",
+      "question_id": 403421
+    },
+    {
+      "intent": "Casting an int to a string in Python",
+      "rewritten_intent": "cast an int `i` to a string and concat to string 'ME'",
+      "snippet": "'ME' + str(i)",
+      "model_solution": "print(' '.join(str(''.join(str(i)))))",
+      "question_id": 3944876
+    },
+    {
+      "intent": "Python sort a List by length of value in tuple",
+      "rewritten_intent": "sort a list `l` by length of value in tuple",
+      "snippet": "l.sort(key=lambda t: len(t[1]), reverse=True)",
+      "model_solution": "sorted(l, key=lambda x: len(l[i]))",
+      "question_id": 19729928
+    },
+    {
+      "intent": "Split by suffix with Python regular expression",
+      "rewritten_intent": "split string `s` by words that ends with 'd'",
+      "snippet": "re.findall('\\\\b(\\\\w+)d\\\\b', s)",
+      "question_id": 31371879
+    },
+    {
+      "intent": "python's re: return True if regex contains in the string",
+      "rewritten_intent": "return `True` if string `foobarrrr` contains regex `ba[rzd]`",
+      "snippet": "bool(re.search('ba[rzd]', 'foobarrrr'))",
+      "question_id": 9012008
+    },
+    {
+      "intent": "Removing duplicates in lists",
+      "rewritten_intent": "Removing duplicates in list `t`",
+      "snippet": "list(set(t))",
+      "model_solution": "[list(item) for item in set(len(item) for item in t)]",
+      "question_id": 7961363
+    },
+    {
+      "intent": "Removing duplicates in lists",
+      "rewritten_intent": "Removing duplicates in list `source_list`",
+      "snippet": "list(set(source_list))",
+      "model_solution": "[list(item) for item in set(len(item) for item in source_list)]",
+      "question_id": 7961363
+    },
+    {
+      "intent": "Removing duplicates in lists",
+      "rewritten_intent": "Removing duplicates in list `abracadabra`",
+      "snippet": "list(OrderedDict.fromkeys('abracadabra'))",
+      "model_solution": "[list(item) for item in set(len(item) for item in abracadabra)]",
+      "question_id": 7961363
+    },
+    {
+      "intent": "Converting lists of tuples to strings Python",
+      "rewritten_intent": "convert elements of each tuple in list `l` into a string  separated by character `@`",
+      "snippet": "\"\"\" \"\"\".join([('%d@%d' % t) for t in l])",
+      "model_solution": "[''.join(x) for x in zip(*l)]",
+      "question_id": 4284648
+    },
+    {
+      "intent": "Converting lists of tuples to strings Python",
+      "rewritten_intent": "convert each tuple in list `l` to a string with '@' separating the tuples' elements",
+      "snippet": "\"\"\" \"\"\".join([('%d@%d' % (t[0], t[1])) for t in l])",
+      "model_solution": "print(' '.join(zip(l, l)))",
+      "question_id": 4284648
+    },
+    {
+      "intent": "How to sort dictionaries by keys in Python",
+      "rewritten_intent": "Sort dictionary `o` in ascending order based on its keys and items",
+      "snippet": "sorted(o.items())",
+      "model_solution": "sorted(list(o.items()), key=lambda x: x[1])",
+      "question_id": 4642501
+    },
+    {
+      "intent": "How to sort dictionaries by keys in Python",
+      "rewritten_intent": "get sorted list of keys of dict `d`",
+      "snippet": "sorted(d)",
+      "model_solution": "sorted(d, key=d.get)",
+      "question_id": 4642501
+    },
+    {
+      "intent": "How to sort dictionaries by keys in Python",
+      "rewritten_intent": null,
+      "snippet": "sorted(d.items())",
+      "model_solution": "sorted(list(data.items()), key=lambda x: x[1])",
+      "question_id": 4642501
+    },
+    {
+      "intent": "convert strings into integers",
+      "rewritten_intent": "convert string \"1\" into integer",
+      "snippet": "int('1')",
+      "model_solution": "int('1', 2)",
+      "question_id": 642154
+    },
+    {
+      "intent": "convert strings into integers",
+      "rewritten_intent": "function to convert strings into integers",
+      "snippet": "int()",
+      "model_solution": "list(map(int, [strings]))",
+      "question_id": 642154
+    },
+    {
+      "intent": "convert strings into integers",
+      "rewritten_intent": "convert items in `T1` to integers",
+      "snippet": "T2 = [map(int, x) for x in T1]",
+      "model_solution": "[int(x) for x in list(T1.values())]",
+      "question_id": 642154
+    },
+    {
+      "intent": "Interleaving two lists in Python",
+      "rewritten_intent": "combine lists `l1` and `l2`  by alternating their elements",
+      "snippet": "[val for pair in zip(l1, l2) for val in pair]",
+      "model_solution": "print(zip(l1, l2))",
+      "question_id": 7946798
+    },
+    {
+      "intent": "list of dicts to/from dict of lists",
+      "rewritten_intent": "group a list of dicts `LD` into one dict by key",
+      "snippet": "print(dict(zip(LD[0], zip(*[list(d.values()) for d in LD]))))",
+      "model_solution": "dict((k, LD[k]) for k in LD)",
+      "question_id": 5558418
+    },
+    {
+      "intent": "How do I sum the first value in each tuple in a list of tuples in Python?",
+      "rewritten_intent": null,
+      "snippet": "sum([pair[0] for pair in list_of_pairs])",
+      "model_solution": "map(sum, zip(*tuples))",
+      "question_id": 638048
+    },
+    {
+      "intent": "Convert unicode string dictionary into dictionary in python",
+      "rewritten_intent": "convert unicode string u\"{'code1':1,'code2':1}\" into dictionary",
+      "snippet": "d = ast.literal_eval(\"{'code1':1,'code2':1}\")",
+      "model_solution": "dict(unicodedata.encode('latin-1'))",
+      "question_id": 14950260
+    },
+    {
+      "intent": "Find all words in a string that start with the $ sign in Python",
+      "rewritten_intent": "find all words in a string `mystring` that start with the `$` sign",
+      "snippet": "[word for word in mystring.split() if word.startswith('$')]",
+      "model_solution": "[i for i in re.findall('<unk>', mystring) if i != '$']",
+      "question_id": 11416772
+    },
+    {
+      "intent": "Python: Converting Epoch time into the datetime",
+      "rewritten_intent": "Convert unix timestamp '1347517370' to formatted string '%Y-%m-%d %H:%M:%S'",
+      "snippet": "time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(1347517370))",
+      "model_solution": "\"\"\"{:,}\"\"\".format(timestamp).strftime('%Y-%m-%d %H:%M:%S')",
+      "question_id": 12400256
+    },
+    {
+      "intent": "Python regex separate space-delimited words into a list",
+      "rewritten_intent": "separate words delimited by one or more spaces into a list",
+      "snippet": "re.split(' +', 'hello world sample text')",
+      "model_solution": "\"\"\" \"\"\".join(itertools.split(' +', para))",
+      "question_id": 4383082
+    },
+    {
+      "intent": "Length of longest word in a list",
+      "rewritten_intent": "length of longest element in list `words`",
+      "snippet": "len(max(words, key=len))",
+      "model_solution": "max(words, key=lambda x: len(words[i]))",
+      "question_id": 14637696
+    },
+    {
+      "intent": "Python: Best Way to Exchange Keys with Values in a Dictionary?",
+      "rewritten_intent": "swap keys with values in a dictionary `a`",
+      "snippet": "res = dict((v, k) for k, v in a.items())",
+      "model_solution": "dict((k, v) for k, v in a.items() if v)",
+      "question_id": 1031851
+    },
+    {
+      "intent": "Check for a key pattern in a dictionary in python",
+      "rewritten_intent": "Check if any key in the dictionary `dict1` starts with the string `EMP$$`",
+      "snippet": "any(key.startswith('EMP$$') for key in dict1)",
+      "model_solution": "any(k in 'EMP$$' for k in EMP$$)",
+      "question_id": 3735814
+    },
+    {
+      "intent": "Check for a key pattern in a dictionary in python",
+      "rewritten_intent": "create list of values from dictionary `dict1` that have a key that starts with 'EMP$$'",
+      "snippet": "[value for key, value in list(dict1.items()) if key.startswith('EMP$$')]",
+      "model_solution": "[k for k, v in dict1.items() if v == 'EMP$$']",
+      "question_id": 3735814
+    },
+    {
+      "intent": "printing tab-separated values of a list",
+      "rewritten_intent": "print elements of list `list` seperated by tabs `\\t`",
+      "snippet": "print('\\t'.join(map(str, list)))",
+      "question_id": 4048964
+    },
+    {
+      "intent": "Python unicode string with UTF-8?",
+      "rewritten_intent": "Encode a latin character in string `Sopet\\xc3\\xb3n` properly",
+      "snippet": "'Sopet\\xc3\\xb3n'.encode('latin-1').decode('utf-8')",
+      "model_solution": "re.findall('\\w', 'SopetÃ³n')",
+      "question_id": 3182716
+    },
+    {
+      "intent": "Regex, find pattern only in middle of string",
+      "rewritten_intent": "regex, find \"n\"s only in the middle of string `s`",
+      "snippet": "re.findall('n(?<=[^n]n)n+(?=[^n])(?i)', s)",
+      "question_id": 35622945
+    },
+    {
+      "intent": "how to show Percentage in python",
+      "rewritten_intent": "display the float `1/3*100` as a percentage",
+      "snippet": "print('{0:.0f}%'.format(1.0 / 3 * 100))",
+      "question_id": 5306756
+    },
+    {
+      "intent": "Sort a list of dicts by dict values",
+      "rewritten_intent": "sort a list of dictionary `mylist` by the key `title`",
+      "snippet": "mylist.sort(key=lambda x: x['title'])",
+      "model_solution": "sorted(mylist, key=lambda x: x['title'])",
+      "question_id": 2878084
+    },
+    {
+      "intent": "Sort a list of dicts by dict values",
+      "rewritten_intent": "sort a list `l` of dicts by dict value 'title'",
+      "snippet": "l.sort(key=lambda x: x['title'])",
+      "model_solution": "sorted(l, key=lambda x: x.get('title')['title'], reverse=True)",
+      "question_id": 2878084
+    },
+    {
+      "intent": "Sort a list of dicts by dict values",
+      "rewritten_intent": "sort a list of dictionaries by the value of keys 'title', 'title_url', 'id' in ascending order.",
+      "snippet": "l.sort(key=lambda x: (x['title'], x['title_url'], x['id']))",
+      "model_solution": "order.sort(key=lambda d: d.get('title', d['title_url']))",
+      "question_id": 2878084
+    },
+    {
+      "intent": "finding n largest differences between two lists",
+      "rewritten_intent": "find 10 largest differences between each respective elements of list `l1` and list `l2`",
+      "snippet": "heapq.nlargest(10, range(len(l1)), key=lambda i: abs(l1[i] - l2[i]))",
+      "model_solution": "[max(x) for x in zip(*l1)]",
+      "question_id": 9323159
+    },
+    {
+      "intent": "Regular Expression to find brackets in a string",
+      "rewritten_intent": "Extract brackets from string `s`",
+      "snippet": "brackets = re.sub('[^(){}[\\\\]]', '', s)",
+      "question_id": 30766151
+    },
+    {
+      "intent": "Removing duplicates from list of lists in Python",
+      "rewritten_intent": "remove duplicate elements from list 'L'",
+      "snippet": "list(dict((x[0], x) for x in L).values())",
+      "model_solution": "[k for k, g in itertools.groupby([L])]",
+      "question_id": 1143379
+    },
+    {
+      "intent": "get item's position in a list",
+      "rewritten_intent": "get the position of item 1 in `testlist`",
+      "snippet": "[i for (i, x) in enumerate(testlist) if (x == 1)]",
+      "model_solution": "len(testlist) - len(set(testlist))",
+      "question_id": 364621
+    },
+    {
+      "intent": "get item's position in a list",
+      "rewritten_intent": "get the position of item 1 in `testlist`",
+      "snippet": "[i for (i, x) in enumerate(testlist) if (x == 1)]",
+      "model_solution": "len(testlist) - len(set(testlist))",
+      "question_id": 364621
+    },
+    {
+      "intent": "get item's position in a list",
+      "rewritten_intent": "get the position of item 1 in `testlist`",
+      "snippet": "for i in [i for (i, x) in enumerate(testlist) if (x == 1)]:\n    pass",
+      "model_solution": "len(testlist) - len(set(testlist))",
+      "question_id": 364621
+    },
+    {
+      "intent": "get item's position in a list",
+      "rewritten_intent": "get the position of item 1 in `testlist`",
+      "snippet": "for i in (i for (i, x) in enumerate(testlist) if (x == 1)):\n    pass",
+      "model_solution": "len(testlist) - len(set(testlist))",
+      "question_id": 364621
+    },
+    {
+      "intent": "get item's position in a list",
+      "rewritten_intent": "get the position of item 1 in `testlist`",
+      "snippet": "gen = (i for (i, x) in enumerate(testlist) if (x == 1))\nfor i in gen:\n    pass",
+      "model_solution": "len(testlist) - len(set(testlist))",
+      "question_id": 364621
+    },
+    {
+      "intent": "get item's position in a list",
+      "rewritten_intent": "get the position of item `element` in list `testlist`",
+      "snippet": "print(testlist.index(element))",
+      "model_solution": "len(testlist) - element[::-1]",
+      "question_id": 364621
+    },
+    {
+      "intent": "get item's position in a list",
+      "rewritten_intent": "get the position of item `element` in list `testlist`",
+      "snippet": "try:\n    print(testlist.index(element))\nexcept ValueError:\n    pass",
+      "model_solution": "len(testlist) - element[::-1]",
+      "question_id": 364621
+    },
+    {
+      "intent": "Find the maximum value in a list of tuples in Python",
+      "rewritten_intent": "find the first element of the tuple with the maximum second element in a list of tuples `lis`",
+      "snippet": "max(lis, key=lambda item: item[1])[0]",
+      "model_solution": "[x[0] for x in lis]",
+      "question_id": 13145368
+    },
+    {
+      "intent": "Find the maximum value in a list of tuples in Python",
+      "rewritten_intent": "get the item at index 0 from the tuple that has maximum value at index 1 in list `lis`",
+      "snippet": "max(lis, key=itemgetter(1))[0]",
+      "model_solution": "lis[0] - lis[-1]",
+      "question_id": 13145368
+    },
+    {
+      "intent": "Tuple conversion to a string",
+      "rewritten_intent": "convert list of tuples `L` to a string",
+      "snippet": "\"\"\", \"\"\".join('(' + ', '.join(i) + ')' for i in L)",
+      "model_solution": "\"\"\"\"\"\".join(item for item in L for item in list(item))",
+      "question_id": 12485244
+    },
+    {
+      "intent": "Python: convert list to generator",
+      "rewritten_intent": "convert a list  into a generator object",
+      "snippet": "(n for n in [1, 2, 3, 5])",
+      "model_solution": "list(range(1, 3))",
+      "question_id": 16041405
+    },
+    {
+      "intent": "Remove multiple items from list in Python",
+      "rewritten_intent": "remove elements from list `oldlist` that have an index number mentioned in list `removelist`",
+      "snippet": "newlist = [v for i, v in enumerate(oldlist) if i not in removelist]",
+      "model_solution": "[x for x in removelist if x[1] == 0]",
+      "question_id": 18837607
+    },
+    {
+      "intent": "How do I convert tuple of tuples to list in one line (pythonic)?",
+      "rewritten_intent": "convert tuple of tuples `(('aa',), ('bb',), ('cc',))` to tuple",
+      "snippet": "from functools import reduce\nreduce(lambda a, b: a + b, (('aa',), ('bb',), ('cc',)))",
+      "model_solution": "map(tuple, zip(*(('aa',), ('bb',), ('cc',))))",
+      "question_id": 8171751
+    },
+    {
+      "intent": "How do I convert tuple of tuples to list in one line (pythonic)?",
+      "rewritten_intent": "convert tuple of tuples `(('aa',), ('bb',), ('cc',))` to list in one line",
+      "snippet": "map(lambda a: a[0], (('aa',), ('bb',), ('cc',)))",
+      "model_solution": "[tuple(x) for x in zip(*(('aa',), ('bb',), ('cc',)))]",
+      "question_id": 8171751
+    },
+    {
+      "intent": "inverse of zip",
+      "rewritten_intent": "unzip the list `[('a', 1), ('b', 2), ('c', 3), ('d', 4)]`",
+      "snippet": "zip(*[('a', 1), ('b', 2), ('c', 3), ('d', 4)])",
+      "model_solution": "[('a', 1), ('b', 2), ('c', 3), ('d', 4)].append([[('a', 1), ('b', 2), ('c', 3), ('d', 4)]])",
+      "question_id": 19339
+    },
+    {
+      "intent": "inverse of zip",
+      "rewritten_intent": "unzip the list `[('a', 1), ('b', 2), ('c', 3), ('d', 4)]`",
+      "snippet": "zip(*[('a', 1), ('b', 2), ('c', 3), ('d', 4)])",
+      "model_solution": "[('a', 1), ('b', 2), ('c', 3), ('d', 4)].append([[('a', 1), ('b', 2), ('c', 3), ('d', 4)]])",
+      "question_id": 19339
+    },
+    {
+      "intent": "inverse of zip",
+      "rewritten_intent": "unzip list `original`",
+      "snippet": "result = ([a for (a, b) in original], [b for (a, b) in original])",
+      "model_solution": "zip(*original)",
+      "question_id": 19339
+    },
+    {
+      "intent": "inverse of zip",
+      "rewritten_intent": "unzip list `original` and return a generator",
+      "snippet": "result = ((a for (a, b) in original), (b for (a, b) in original))",
+      "model_solution": "original.split()",
+      "question_id": 19339
+    },
+    {
+      "intent": "inverse of zip",
+      "rewritten_intent": "unzip list `[('a', 1), ('b', 2), ('c', 3), ('d', 4), ('e', )]`",
+      "snippet": "zip(*[('a', 1), ('b', 2), ('c', 3), ('d', 4), ('e',)])",
+      "model_solution": "[('a', 1), ('b', 2), ('c', 3), ('d', 4), ('e', )].append([[('a', 1), ('b', 2), ('c', 3), ('d', 4), ('e', )]])",
+      "question_id": 19339
+    },
+    {
+      "intent": "inverse of zip",
+      "rewritten_intent": "unzip list `[('a', 1), ('b', 2), ('c', 3), ('d', 4), ('e', )]` and fill empty results with None",
+      "snippet": "map(None, *[('a', 1), ('b', 2), ('c', 3), ('d', 4), ('e',)])",
+      "model_solution": "[('a', 1), ('b', 2), ('c', 3), ('d', 4), ('e', )].insert(0, \"[('a', 1), ('b', 2), ('c', 3), ('d', 4), ('e', )]\")",
+      "question_id": 19339
+    },
+    {
+      "intent": "Add key to a dictionary",
+      "rewritten_intent": "Add key \"mynewkey\" to dictionary `d` with value \"mynewvalue\"",
+      "snippet": "d['mynewkey'] = 'mynewvalue'",
+      "model_solution": "d.update({'mynewkey': 4, 'mynewvalue': 5})",
+      "question_id": 1024847
+    },
+    {
+      "intent": "Add key to a dictionary",
+      "rewritten_intent": "Add key 'a' to dictionary `data` with value 1",
+      "snippet": "data.update({'a': 1, })",
+      "model_solution": "data['a'].update({a})",
+      "question_id": 1024847
+    },
+    {
+      "intent": "Add key to a dictionary",
+      "rewritten_intent": "Add key 'a' to dictionary `data` with value 1",
+      "snippet": "data.update(dict(a=1))",
+      "model_solution": "data['a'].update({a})",
+      "question_id": 1024847
+    },
+    {
+      "intent": "Add key to a dictionary",
+      "rewritten_intent": "Add key 'a' to dictionary `data` with value 1",
+      "snippet": "data.update(a=1)",
+      "model_solution": "data['a'].update({a})",
+      "question_id": 1024847
+    },
+    {
+      "intent": "Python - how to round down to 2 decimals",
+      "rewritten_intent": "Round number `answer` to 2 precision after the decimal point",
+      "snippet": "answer = str(round(answer, 2))",
+      "model_solution": "print(round(answer, 2))",
+      "question_id": 20457038
+    },
+    {
+      "intent": "Python split a string using regex",
+      "rewritten_intent": null,
+      "snippet": "re.findall('(.+?):(.+?)\\\\b ?', text)",
+      "question_id": 16330838
+    },
+    {
+      "intent": "Generate all subsets of size k (containing k elements) in Python",
+      "rewritten_intent": "generate all 2-element subsets of tuple `(1, 2, 3)`",
+      "snippet": "list(itertools.combinations((1, 2, 3), 2))",
+      "model_solution": "print(list(itertools.product([(1, 2, 3)], 2)))",
+      "question_id": 7378180
+    },
+    {
+      "intent": "Python: How to remove empty lists from a list?",
+      "rewritten_intent": "Get a new list `list2`by removing empty list from a list of lists `list1`",
+      "snippet": "list2 = [x for x in list1 if x != []]",
+      "model_solution": "l = [[i for i in list1] for i in list1]",
+      "question_id": 4842956
+    },
+    {
+      "intent": "Python: How to remove empty lists from a list?",
+      "rewritten_intent": "Create `list2` to contain the lists from list `list1` excluding the empty lists from `list1`",
+      "snippet": "list2 = [x for x in list1 if x]",
+      "model_solution": "list1 = [[str(i) for i in list1] for i in range(list1)]",
+      "question_id": 4842956
+    },
+    {
+      "intent": "regex to get all text outside of brackets",
+      "rewritten_intent": "get all text that is not enclosed within square brackets in string `example_str`",
+      "snippet": "re.findall('(.*?)\\\\[.*?\\\\]', example_str)",
+      "question_id": 17284947
+    },
+    {
+      "intent": "regex to get all text outside of brackets",
+      "rewritten_intent": "Use a regex to get all text in a string `example_str` that is not surrounded by square brackets",
+      "snippet": "re.findall('(.*?)(?:\\\\[.*?\\\\]|$)', example_str)",
+      "question_id": 17284947
+    },
+    {
+      "intent": "Matching multiple regex patterns with the alternation operator?",
+      "rewritten_intent": "get whatever is between parentheses as a single match, and any char outside as an individual match in string '(zyx)bc'",
+      "snippet": "re.findall('\\\\(.+?\\\\)|\\\\w', '(zyx)bc')",
+      "question_id": 14182339
+    },
+    {
+      "intent": "Matching multiple regex patterns with the alternation operator?",
+      "rewritten_intent": "match regex '\\\\((.*?)\\\\)|(\\\\w)' with string '(zyx)bc'",
+      "snippet": "re.findall('\\\\((.*?)\\\\)|(\\\\w)', '(zyx)bc')",
+      "question_id": 14182339
+    },
+    {
+      "intent": "Matching multiple regex patterns with the alternation operator?",
+      "rewritten_intent": "match multiple regex patterns with the alternation operator `|` in a string `(zyx)bc`",
+      "snippet": "re.findall('\\\\(.*?\\\\)|\\\\w', '(zyx)bc')",
+      "question_id": 14182339
+    },
+    {
+      "intent": "Perform a string operation for every element in a Python list",
+      "rewritten_intent": "formate each string cin list `elements` into pattern '%{0}%'",
+      "snippet": "elements = ['%{0}%'.format(element) for element in elements]",
+      "model_solution": "re.findall('%{0}%', elements)",
+      "question_id": 7126916
+    },
+    {
+      "intent": "Python dictionary: Get list of values for list of keys",
+      "rewritten_intent": "get list of values from dictionary 'mydict' w.r.t. list of keys 'mykeys'",
+      "snippet": "[mydict[x] for x in mykeys]",
+      "model_solution": "[k for k, v in list(mydict.items()) if v == 'mykeys']",
+      "question_id": 18453566
+    },
+    {
+      "intent": "Create dictionary from lists of keys and multiple values",
+      "rewritten_intent": "convert list `[('Name', 'Joe'), ('Age', 22)]` into a dictionary",
+      "snippet": "dict([('Name', 'Joe'), ('Age', 22)])",
+      "model_solution": "dict(map(lambda s: s.split(':'), [[('Name', 'Joe'), ('Age', 22)]]))",
+      "question_id": 12692135
+    },
+    {
+      "intent": "Partitioning a string in Python by a regular expression",
+      "rewritten_intent": "split a string into a list of words and whitespace",
+      "snippet": "re.split('(\\\\W+)', s)",
+      "question_id": 5932059
+    },
+    {
+      "intent": "How to reverse a dictionary in Python?",
+      "rewritten_intent": "reverse the keys and values in a dictionary `myDictionary`",
+      "snippet": "{i[1]: i[0] for i in list(myDictionary.items())}",
+      "model_solution": "dict((v, k) for k, v in myDictionary.items())",
+      "question_id": 35945473
+    },
+    {
+      "intent": "finding index of multiple items in a list",
+      "rewritten_intent": "finding the index of elements containing substring 'how' and 'what' in a list of strings 'myList'.",
+      "snippet": "[i for i, j in enumerate(myList) if 'how' in j.lower() or 'what' in j.lower()]",
+      "model_solution": "[a for a, b in enumerate(how) if 'what' in '']",
+      "question_id": 30729735
+    },
+    {
+      "intent": "find out if a Python object is a string",
+      "rewritten_intent": "check if object `obj` is a string",
+      "snippet": "isinstance(obj, str)",
+      "model_solution": "if isinstance(obj, ''): pass",
+      "question_id": 1303243
+    },
+    {
+      "intent": "find out if a Python object is a string",
+      "rewritten_intent": "check if object `o` is a string",
+      "snippet": "isinstance(o, str)",
+      "model_solution": "if isinstance(o, ''): pass",
+      "question_id": 1303243
+    },
+    {
+      "intent": "find out if a Python object is a string",
+      "rewritten_intent": "check if object `o` is a string",
+      "snippet": "(type(o) is str)",
+      "model_solution": "if isinstance(o, ''): pass",
+      "question_id": 1303243
+    },
+    {
+      "intent": "find out if a Python object is a string",
+      "rewritten_intent": "check if object `o` is a string",
+      "snippet": "isinstance(o, str)",
+      "model_solution": "if isinstance(o, ''): pass",
+      "question_id": 1303243
+    },
+    {
+      "intent": "find out if a Python object is a string",
+      "rewritten_intent": "check if `obj_to_test` is a string",
+      "snippet": "isinstance(obj_to_test, str)",
+      "model_solution": "any(e in obj_to_test for obj_to_test in obj_to_test.split(','))",
+      "question_id": 1303243
+    },
+    {
+      "intent": "take the content of a list and append it to another list",
+      "rewritten_intent": "append list `list1` to `list2`",
+      "snippet": "list2.extend(list1)",
+      "model_solution": "[j for i in list1 for j in i]",
+      "question_id": 8177079
+    },
+    {
+      "intent": "take the content of a list and append it to another list",
+      "rewritten_intent": "append list `mylog` to `list1`",
+      "snippet": "list1.extend(mylog)",
+      "model_solution": "[j for i in mylog for j in i]",
+      "question_id": 8177079
+    },
+    {
+      "intent": "take the content of a list and append it to another list",
+      "rewritten_intent": "append list `a` to `c`",
+      "snippet": "c.extend(a)",
+      "model_solution": "[j for i in a for j in i]",
+      "question_id": 8177079
+    },
+    {
+      "intent": "Appending tuples to lists",
+      "rewritten_intent": "append a tuple of elements from list `a` with indexes '[0][0] [0][2]' to list `b`",
+      "snippet": "b.append((a[0][0], a[0][2]))",
+      "model_solution": "[(a + b) for a, b in zip(a, b)]",
+      "question_id": 4126227
+    },
+    {
+      "intent": "How to find the position of an element in a list , in Python?",
+      "rewritten_intent": "find the index of an element 'MSFT' in a list `stocks_list`",
+      "snippet": "[x for x in range(len(stocks_list)) if stocks_list[x] == 'MSFT']",
+      "model_solution": "[i for i, j in enumerate(stocks_list) if i == 'MSFT']",
+      "question_id": 1762484
+    },
+    {
+      "intent": "How to remove symbols from a string with Python?",
+      "rewritten_intent": "remove symbols from a string `s`",
+      "snippet": "re.sub('[^\\\\w]', ' ', s)",
+      "question_id": 875968
+    },
+    {
+      "intent": "Regex and Octal Characters",
+      "rewritten_intent": "Find octal characters matches from a string `str` using regex",
+      "snippet": "print(re.findall(\"'\\\\\\\\[0-7]{1,3}'\", str))",
+      "question_id": 34750084
+    },
+    {
+      "intent": "Python split string based on regex",
+      "rewritten_intent": "split string `input` based on occurrences of regex pattern '[ ](?=[A-Z]+\\\\b)'",
+      "snippet": "re.split('[ ](?=[A-Z]+\\\\b)', input)",
+      "question_id": 13209288
+    },
+    {
+      "intent": "Python split string based on regex",
+      "rewritten_intent": "Split string `input` at every space followed by an upper-case letter",
+      "snippet": "re.split('[ ](?=[A-Z])', input)",
+      "question_id": 13209288
+    },
+    {
+      "intent": "Mapping dictionary value to list",
+      "rewritten_intent": "get a list from a list `lst` with values mapped into a dictionary `dct`",
+      "snippet": "[dct[k] for k in lst]",
+      "model_solution": "dict((k.get('key'), v) for k, v in list(dct.values()))",
+      "question_id": 33078554
+    },
+    {
+      "intent": "Truncating floats in Python",
+      "rewritten_intent": "truncate float 1.923328437452 to 3 decimal places",
+      "snippet": "round(1.923328437452, 3)",
+      "model_solution": "round(1.923328437452, 3)",
+      "question_id": 783897
+    },
+    {
+      "intent": "Order list by date (String and datetime)",
+      "rewritten_intent": "sort list `li` in descending order based on the date value in second element of each list in list `li`",
+      "snippet": "sorted(li, key=lambda x: datetime.strptime(x[1], '%d/%m/%Y'), reverse=True)",
+      "model_solution": "li.sort(key=operator.itemgetter(1))",
+      "question_id": 22859493
+    },
+    {
+      "intent": "Counting the Number of keywords in a dictionary in python",
+      "rewritten_intent": "get number of keys in dictionary `yourdict`",
+      "snippet": "len(list(yourdict.keys()))",
+      "model_solution": "sum(i for i in list(yourdict.keys()))",
+      "question_id": 2212433
+    },
+    {
+      "intent": "Most efficient way to convert items of a list to int and sum them up",
+      "rewritten_intent": "Sum integers contained in strings in list `['', '3.4', '', '', '1.0']`",
+      "snippet": "sum(int(float(item)) for item in [_f for _f in ['', '3.4', '', '', '1.0'] if _f])",
+      "model_solution": "sum(sum(x) for x in ['', '3.4', '', '', '1.0'])",
+      "question_id": 25388796
+    },
+    {
+      "intent": "Getting the length of an array",
+      "rewritten_intent": "Get the length of list `my_list`",
+      "snippet": "len(my_list)",
+      "model_solution": "len(my_list)",
+      "question_id": 518021
+    },
+    {
+      "intent": "Getting the length of an array",
+      "rewritten_intent": "Getting the length of array `l`",
+      "snippet": "len(l)",
+      "model_solution": "len(l)",
+      "question_id": 518021
+    },
+    {
+      "intent": "Getting the length of an array",
+      "rewritten_intent": "Getting the length of array `s`",
+      "snippet": "len(s)",
+      "model_solution": "len(s)",
+      "question_id": 518021
+    },
+    {
+      "intent": "Getting the length of an array",
+      "rewritten_intent": "Getting the length of `my_tuple`",
+      "snippet": "len(my_tuple)",
+      "model_solution": "len(my_tuple)",
+      "question_id": 518021
+    },
+    {
+      "intent": "Getting the length of an array",
+      "rewritten_intent": "Getting the length of `my_string`",
+      "snippet": "len(my_string)",
+      "model_solution": "len(my_string)",
+      "question_id": 518021
+    },
+    {
+      "intent": "Python string replace two things at once?",
+      "rewritten_intent": "replace each 'a' with 'b' and each 'b' with 'a' in the string 'obama' in a single pass.",
+      "snippet": "\"\"\"obama\"\"\".replace('a', '%temp%').replace('b', 'a').replace('%temp%', 'b')",
+      "model_solution": "a.replace('b', 'a')",
+      "question_id": 8687018
+    },
+    {
+      "intent": "How to sort Counter by value? - python",
+      "rewritten_intent": "reverse sort Counter `x` by values",
+      "snippet": "sorted(x, key=x.get, reverse=True)",
+      "model_solution": "sorted(iter(x.items()), key=itemgetter(1))",
+      "question_id": 20950650
+    },
+    {
+      "intent": "How to sort Counter by value? - python",
+      "rewritten_intent": "reverse sort counter `x` by value",
+      "snippet": "sorted(list(x.items()), key=lambda pair: pair[1], reverse=True)",
+      "model_solution": "sorted(iter(x.items()), key=itemgetter(1), reverse=True)",
+      "question_id": 20950650
+    },
+    {
+      "intent": "Sorting a list of lists in Python",
+      "rewritten_intent": "sort a list of lists 'c2' such that third row comes first",
+      "snippet": "c2.sort(key=lambda row: row[2])",
+      "model_solution": "sorted(c2, key=lambda x: int(list(x[0])[0]))",
+      "question_id": 3398589
+    },
+    {
+      "intent": "Sorting a list of lists in Python",
+      "rewritten_intent": null,
+      "snippet": "c2.sort(key=lambda row: (row[2], row[1], row[0]))",
+      "model_solution": "[sorted(item) for item in lists]",
+      "question_id": 3398589
+    },
+    {
+      "intent": "Sorting a list of lists in Python",
+      "rewritten_intent": null,
+      "snippet": "c2.sort(key=lambda row: (row[2], row[1]))",
+      "model_solution": "[sorted(item) for item in lists]",
+      "question_id": 3398589
+    },
+    {
+      "intent": "Python - How to declare and add items to an array?",
+      "rewritten_intent": "add an item with key 'third_key' and value 1 to an dictionary `my_dict`",
+      "snippet": "my_dict.update({'third_key': 1})",
+      "model_solution": "my_dict['third_key'].update({'third_key': 'third_key'})",
+      "question_id": 10487278
+    },
+    {
+      "intent": "Python - How to declare and add items to an array?",
+      "rewritten_intent": "declare an array",
+      "snippet": "my_list = []",
+      "model_solution": "i = []",
+      "question_id": 10487278
+    },
+    {
+      "intent": "Python - How to declare and add items to an array?",
+      "rewritten_intent": "Insert item `12` to a list `my_list`",
+      "snippet": "my_list.append(12)",
+      "model_solution": "my_list.insert(2, '12')",
+      "question_id": 10487278
+    },
+    {
+      "intent": "Add entry to list and remove first one in Python",
+      "rewritten_intent": "add an entry 'wuggah' at the beginning of list `myList`",
+      "snippet": "myList.insert(0, 'wuggah')",
+      "model_solution": "myList = [wuggah]",
+      "question_id": 10155684
+    },
+    {
+      "intent": "determine the variable type",
+      "rewritten_intent": "get the type of `i`",
+      "snippet": "type(i)",
+      "model_solution": "isinstance(i, i)",
+      "question_id": 402504
+    },
+    {
+      "intent": "determine the variable type",
+      "rewritten_intent": "determine the type of variable `v`",
+      "snippet": "type(v)",
+      "model_solution": "isinstance(v, v)",
+      "question_id": 402504
+    },
+    {
+      "intent": "determine the variable type",
+      "rewritten_intent": "determine the type of variable `v`",
+      "snippet": "type(v)",
+      "model_solution": "isinstance(v, v)",
+      "question_id": 402504
+    },
+    {
+      "intent": "determine the variable type",
+      "rewritten_intent": "determine the type of variable `v`",
+      "snippet": "type(v)",
+      "model_solution": "isinstance(v, v)",
+      "question_id": 402504
+    },
+    {
+      "intent": "determine the variable type",
+      "rewritten_intent": "determine the type of variable `v`",
+      "snippet": "type(v)",
+      "model_solution": "isinstance(v, v)",
+      "question_id": 402504
+    },
+    {
+      "intent": "determine the variable type",
+      "rewritten_intent": "get the type of variable `variable_name`",
+      "snippet": "print(type(variable_name))",
+      "model_solution": "isinstance(variable_name, int)",
+      "question_id": 402504
+    },
+    {
+      "intent": "Get the nth item of a generator in Python",
+      "rewritten_intent": "get the 5th item of a generator",
+      "snippet": "next(itertools.islice(range(10), 5, 5 + 1))",
+      "model_solution": "json.load(f)",
+      "question_id": 2300756
+    },
+    {
+      "intent": "Python concat string with list",
+      "rewritten_intent": "join a list of strings `list` using a space ' '",
+      "snippet": "\"\"\" \"\"\".join(list)",
+      "model_solution": "print(' '.join(list))",
+      "question_id": 8546245
+    },
+    {
+      "intent": "printing double quotes around a variable",
+      "rewritten_intent": "Print a string `word` with string format",
+      "snippet": "print('\"{}\"'.format(word))",
+      "question_id": 20056548
+    },
+    {
+      "intent": "Python concat string with list",
+      "rewritten_intent": "join a list of strings `list` using a space ' '",
+      "snippet": "\"\"\" \"\"\".join(list)",
+      "question_id": 8546245
+    },
+    {
+      "intent": "Extending a list of lists in Python?",
+      "rewritten_intent": "create list `y` containing two empty lists",
+      "snippet": "y = [[] for n in range(2)]",
+      "model_solution": "y = [[] for i in range(3)]",
+      "question_id": 2276416
+    },
+    {
+      "intent": "How to delete all instances of a character in a string in python?",
+      "rewritten_intent": "delete all occurrences of character 'i' in string 'it is icy'",
+      "snippet": "\"\"\"\"\"\".join([char for char in 'it is icy' if char != 'i'])",
+      "model_solution": "\"\"\"it is icy\"\"\".replace('i', '')",
+      "question_id": 22187233
+    },
+    {
+      "intent": "How to delete all instances of a character in a string in python?",
+      "rewritten_intent": "delete all instances of a character 'i' in a string 'it is icy'",
+      "snippet": "re.sub('i', '', 'it is icy')",
+      "question_id": 22187233
+    },
+    {
+      "intent": "How to delete all instances of a character in a string in python?",
+      "rewritten_intent": "delete all characters \"i\" in string \"it is icy\"",
+      "snippet": "\"\"\"it is icy\"\"\".replace('i', '')",
+      "model_solution": "\"\"\"it is icy\"\"\".translate(' '.join(c for c in it is icy if c not in c))",
+      "question_id": 22187233
+    },
+    {
+      "intent": "How to delete all instances of a character in a string in python?",
+      "rewritten_intent": null,
+      "snippet": "\"\"\"\"\"\".join([char for char in 'it is icy' if char != 'i'])",
+      "model_solution": "newstr = oldstr.replace('M', '')",
+      "question_id": 22187233
+    },
+    {
+      "intent": "converting list of string to list of integer",
+      "rewritten_intent": "converting list of strings `intstringlist` to list of integer `nums`",
+      "snippet": "nums = [int(x) for x in intstringlist]",
+      "model_solution": "nums = [int(x) for x in intstringlist]",
+      "question_id": 10351772
+    },
+    {
+      "intent": "Python float to int conversion",
+      "rewritten_intent": "round off the float that is the product of `2.52 * 100` and convert it to an int",
+      "snippet": "int(round(2.51 * 100))",
+      "model_solution": "float(round(2.52 * 100))",
+      "question_id": 6569528
+    },
+    {
+      "intent": "Python/Numpy: Convert list of bools to unsigned int",
+      "rewritten_intent": "Sum the corresponding decimal values for binary values of each boolean element in list `x`",
+      "snippet": "sum(1 << i for i, b in enumerate(x) if b)",
+      "model_solution": "sum(int(x) for x in x)",
+      "question_id": 4065737
+    },
+    {
+      "intent": "How to flatten a hetrogenous list of list into a single list in python?",
+      "rewritten_intent": "Convert list of lists `data` into a flat list",
+      "snippet": "[y for x in data for y in (x if isinstance(x, list) else [x])]",
+      "model_solution": "[j for i in data for j in i]",
+      "question_id": 10632111
+    },
+    {
+      "intent": "String Slicing Python",
+      "rewritten_intent": "remove last comma character ',' in string `s`",
+      "snippet": "\"\"\"\"\"\".join(s.rsplit(',', 1))",
+      "model_solution": "s = s.replace(',', '')",
+      "question_id": 1010961
+    },
+    {
+      "intent": "How do I find the string between two special characters?",
+      "rewritten_intent": "find the string in `your_string` between two special characters \"[\" and \"]\"",
+      "snippet": "re.search('\\\\[(.*)\\\\]', your_string).group(1)",
+      "question_id": 14716342
+    },
+    {
+      "intent": "How to count the number of times something occurs inside a certain string?",
+      "rewritten_intent": "count number of times string 'brown' occurred in string 'The big brown fox is brown'",
+      "snippet": "\"\"\"The big brown fox is brown\"\"\".count('brown')",
+      "model_solution": "\"\"\"The big brown fox is brown\"\"\".count('brown')",
+      "question_id": 1666700
+    },
+    {
+      "intent": "Split string into a list",
+      "rewritten_intent": "split string `text` by space",
+      "snippet": "text.split()",
+      "model_solution": "re.split(' ', text)",
+      "question_id": 743806
+    },
+    {
+      "intent": "Split string into a list",
+      "rewritten_intent": "split string `text` by \",\"",
+      "snippet": "text.split(',')",
+      "model_solution": ",.split(',')",
+      "question_id": 743806
+    },
+    {
+      "intent": "Split string into a list",
+      "rewritten_intent": "Split string `line` into a list by whitespace",
+      "snippet": "line.split()",
+      "model_solution": "[x.strip() for x in line.split(',')]",
+      "question_id": 743806
+    },
+    {
+      "intent": "Replacing characters in a regex",
+      "rewritten_intent": "replace dot characters  '.' associated with ascii letters in list `s` with space ' '",
+      "snippet": "[re.sub('(?<!\\\\d)\\\\.(?!\\\\d)', ' ', i) for i in s]",
+      "question_id": 35044115
+    },
+    {
+      "intent": "Sort A list of Strings Based on certain field",
+      "rewritten_intent": "sort list `list_of_strings` based on second index of each string `s`",
+      "snippet": "sorted(list_of_strings, key=lambda s: s.split(',')[1])",
+      "model_solution": "list_of_strings.sort(key=lambda x: s.index(x[0]))",
+      "question_id": 38388799
+    },
+    {
+      "intent": "How to eliminate all strings from a list",
+      "rewritten_intent": "eliminate all strings from list `lst`",
+      "snippet": "[element for element in lst if isinstance(element, int)]",
+      "model_solution": "[dict(y) for y in lst]",
+      "question_id": 37004138
+    },
+    {
+      "intent": "How to eliminate all strings from a list",
+      "rewritten_intent": "get all the elements except strings from the list 'lst'.",
+      "snippet": "[element for element in lst if not isinstance(element, str)]",
+      "model_solution": "[x for x in lst if x[2] == 1]",
+      "question_id": 37004138
+    },
+    {
+      "intent": "Variants of string concatenation?",
+      "rewritten_intent": "concatenate array of strings `['A', 'B', 'C', 'D']` into a string",
+      "snippet": "\"\"\"\"\"\".join(['A', 'B', 'C', 'D'])",
+      "model_solution": "\"\"\"\"\"\".join([['A', 'B', 'C', 'D']])",
+      "question_id": 34158494
+    },
+    {
+      "intent": "Removing an item from list matching a substring - Python",
+      "rewritten_intent": "Remove all strings from a list a strings `sents` where the values starts with `@$\\t` or `#`",
+      "snippet": "[x for x in sents if not x.startswith('@$\\t') and not x.startswith('#')]",
+      "model_solution": "print(' '.join([sub for sub in sents if '@$\t' in s]))",
+      "question_id": 12666897
+    },
+    {
+      "intent": "sort a list of dicts by x then by y",
+      "rewritten_intent": "sort a list of dictionary `list` first by key `points` and then by `time`",
+      "snippet": "list.sort(key=lambda item: (item['points'], item['time']))",
+      "model_solution": "list.sort(key=lambda x: (x['points'], x['time']))",
+      "question_id": 5944630
+    },
+    {
+      "intent": "How to convert a Python datetime object to seconds",
+      "rewritten_intent": "convert datetime object `(1970, 1, 1)` to seconds",
+      "snippet": "(t - datetime.datetime(1970, 1, 1)).total_seconds()",
+      "model_solution": "time.time()",
+      "question_id": 7852855
+    },
+    {
+      "intent": "How to replace only part of the match with python re.sub",
+      "rewritten_intent": "insert `_suff` before the file extension in `long.file.name.jpg` or replace `_a` with `suff` if it precedes the extension.",
+      "snippet": "re.sub('(\\\\_a)?\\\\.([^\\\\.]*)$', '_suff.\\\\2', 'long.file.name.jpg')",
+      "question_id": 2763750
+    },
+    {
+      "intent": "How to get a 16bit Unsigned integer in python",
+      "rewritten_intent": "Convert integer `number` into an unassigned integer",
+      "snippet": "struct.unpack('H', struct.pack('h', number))",
+      "model_solution": "int(int(number))",
+      "question_id": 19546911
+    },
+    {
+      "intent": "How can I use sum() function for a list in Python?",
+      "rewritten_intent": "convert int values in list `numlist` to float",
+      "snippet": "numlist = [float(x) for x in numlist]",
+      "model_solution": "[float(i) for i in numlist]",
+      "question_id": 9746522
+    },
+    {
+      "intent": "Is there a Python Library that contains a list of all the ascii characters?",
+      "rewritten_intent": "Create a list containing all ascii characters as its elements",
+      "snippet": "[chr(i) for i in range(127)]",
+      "model_solution": "[ord(c) for c in range(10)]",
+      "question_id": 5891453
+    },
+    {
+      "intent": "Python Regex - checking for a capital letter with a lowercase after",
+      "rewritten_intent": "python regex - check for a capital letter with a following lowercase in string `string`",
+      "snippet": "re.sub('^[A-Z0-9]*(?![a-z])', '', string)",
+      "question_id": 21805490
+    },
+    {
+      "intent": "Last Key in Python Dictionary",
+      "rewritten_intent": "get the last key of dictionary `dict`",
+      "snippet": "list(dict.keys())[-1]",
+      "model_solution": "print(dict[-1])",
+      "question_id": 16125229
+    },
+    {
+      "intent": "Python - Unicode to ASCII conversion",
+      "rewritten_intent": "convert unicode string `s` to ascii",
+      "snippet": "s.encode('iso-8859-15')",
+      "model_solution": "ord(s)",
+      "question_id": 19527279
+    },
+    {
+      "intent": "Python regex findall numbers and dots",
+      "rewritten_intent": "Find all numbers and dots from a string `text` using regex",
+      "snippet": "re.findall('Test([0-9.]*[0-9]+)', text)",
+      "question_id": 356483
+    },
+    {
+      "intent": "Python regex findall numbers and dots",
+      "rewritten_intent": "python regex  to find all numbers and dots from 'text'",
+      "snippet": "re.findall('Test([\\\\d.]*\\\\d+)', text)",
+      "question_id": 356483
+    },
+    {
+      "intent": "Sorting a dictionary of tuples in Python",
+      "rewritten_intent": "Sort a list of tuples `b` by third item in the tuple",
+      "snippet": "b.sort(key=lambda x: x[1][2])",
+      "model_solution": "sorted(b, key=lambda e: e[0])",
+      "question_id": 7349646
+    },
+    {
+      "intent": "how to create a file name with the current date & time in python?",
+      "rewritten_intent": "create a datetime with the current date & time",
+      "snippet": "datetime.datetime.now()",
+      "question_id": 10607688
+    },
+    {
+      "intent": "How to get the index of an integer from a list if the list contains a boolean?",
+      "rewritten_intent": "get the index of an integer `1` from a list `lst` if the list also contains boolean items",
+      "snippet": "next(i for i, x in enumerate(lst) if not isinstance(x, bool) and x == 1)",
+      "model_solution": "[i for i in lst if i > 3]",
+      "question_id": 30843103
+    },
+    {
+      "intent": "Subtract a value from every number in a list in Python?",
+      "rewritten_intent": "subtract 13 from every number in a list `a`",
+      "snippet": "a[:] = [(x - 13) for x in a]",
+      "model_solution": "[(x1 - x2) for x1, x2 in zip(a, 13)]",
+      "question_id": 4918425
+    },
+    {
+      "intent": "Is there a function in Python to split a string without ignoring the spaces?",
+      "rewritten_intent": "split a string `mystring` considering the spaces ' '",
+      "snippet": "mystring.replace(' ', '! !').split('!')",
+      "model_solution": "[x.strip() for x in mystring.split(' ')]",
+      "question_id": 113534
+    },
+    {
+      "intent": "Sum of multiple list of lists index wise",
+      "rewritten_intent": "sum elements at the same index in list `data`",
+      "snippet": "[[sum(item) for item in zip(*items)] for items in zip(*data)]",
+      "model_solution": "map(sum, zip(*data))",
+      "question_id": 36003967
+    }
+  ]
