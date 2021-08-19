@@ -205,12 +205,12 @@ add an item with key 'third_key' and value 1 to an dictionary `my_dict`,my_dict.
 declare an array,my_list = [],0
 Insert item `12` to a list `my_list`,my_list.append(12),0
 add an entry 'wuggah' at the beginning of list `myList`,"myList.insert(0, 'wuggah')",0
-get the type of `i`,type(i),"{'i': ['int', 'str', 'int-str', 'list[int]', 'list[str]', 'bool', 'list[bool]', 'dict']}"
-determine the type of variable `v`,type(v),"{'v': ['int', 'str', 'int-str', 'list[int]', 'list[str]', 'bool', 'list[bool]', 'dict']}"
-determine the type of variable `v`,type(v),"{'v': ['int', 'str', 'int-str', 'list[int]', 'list[str]', 'bool', 'list[bool]', 'dict']}"
-determine the type of variable `v`,type(v),"{'v': ['int', 'str', 'int-str', 'list[int]', 'list[str]', 'bool', 'list[bool]', 'dict']}"
-determine the type of variable `v`,type(v),"{'v': ['int', 'str', 'int-str', 'list[int]', 'list[str]', 'bool', 'list[bool]', 'dict']}"
-get the type of variable `variable_name`,(type(variable_name)),"{'variable_name': ['int', 'str', 'int-str', 'list[int]', 'list[str]', 'bool', 'list[bool]', 'dict']}"
+get the type of `i`,type(i),0
+determine the type of variable `v`,type(v),0
+determine the type of variable `v`,type(v),0
+determine the type of variable `v`,type(v),0
+determine the type of variable `v`,type(v),0
+get the type of variable `variable_name`,(type(variable_name)),0
 get the 5th item of a generator,"next(itertools.islice(range(10), 5, 5 + 1))",3
 join a list of strings `list` using a space ' ',""""""" """""".join(list)",0
 Print a string `word` with string format,"('""{}""'.format(word))",1
