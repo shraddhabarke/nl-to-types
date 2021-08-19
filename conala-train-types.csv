@@ -780,7 +780,7 @@ remove all square brackets from string 'abcd[e]yth[ac]ytwec',"re.sub('\\[.*?\\]'
 find all substrings in string `mystring` composed only of letters `a` and `b` where each `a` is directly preceded and succeeded by `b`,"re.findall('\\b(?:b+a)+b+\\b', mystring)","{'mystring': ['str', 'int-str']}",<class 'list'>
 convert list `lst` of tuples of floats to list `str_list` of tuples of strings of floats in scientific notation with eight decimal point precision,str_list = [tuple('{0:.8e}'.format(flt) for flt in sublist) for sublist in lst],"{'lst': ['list[tuple]'}",<class 'list'>
 convert list of sublists `lst` of floats to a list of sublists `str_list` of strings of integers in scientific notation with 8 decimal points,str_list = [['{0:.8e}'.format(flt) for flt in sublist] for sublist in lst],"{'lst': ['nested-list'}",<class 'list'>
-Create a tuple `t` containing first element of each tuple in tuple `s`,t = tuple(x[0] for x in s),"{'s': ['list[tuple]'}",<class 'list'>
+Create a tuple `t` containing first element of each tuple in list `s`,t = tuple(x[0] for x in s),"{'s': ['list[tuple]'}",<class 'list'>
 obtain the current day of the week in a 3 letter format from a datetime object,datetime.datetime.now().strftime('%a'),{},<class 'str'>
 get the ASCII value of a character 'a' as an int,ord('a'),{},<class 'int'>
 get the ASCII value of a character u'あ' as an int,ord('\u3042'),{},<class 'int'>
@@ -864,7 +864,7 @@ Convert each list in list `main_list` into a tuple,"map(list, zip(*main_list))",
 split a string 's' by space while ignoring spaces within square braces and quotes.,"re.findall('\\[[^\\]]*\\]|""[^""]*""|\\S+', s)","{'s': ['str', 'int-str']}",<class 'list'>
 get all characters between two `$` characters in string `string`,"re.findall('\\$([^$]*)\\$', string)","{'string': ['str', 'int-str']}",<class 'list'>
 getting the string between 2 '$' characters in '$sin (x)$ is an function of x',"re.findall('\\$(.*?)\\$', '$sin (x)$ is an function of x')",{},<class 'list'>
-Format a date object `str_data` into iso fomrat,"datetime.datetime.strptime(str_date, '%m/%d/%Y').date().isoformat()","{'str_date': ['str']}",<class 'str'>
+Format a date object `str_date` into iso fomrat,"datetime.datetime.strptime(str_date, '%m/%d/%Y').date().isoformat()","{'str_date': ['str']}",<class 'str'>
 Get a list of all keys from dictionary `dictA` where the number of occurrences of value `duck` in that key is more than `1`,"[k for k, v in dictA.items() if v.count('duck') > 1]","{'dictA': ['dict']}",<class 'list'>
 "Create sub matrix of a list of lists `[[2, 3, 4], [2, 3, 4], [2, 3, 4]]` (without numpy)","[[2, 3, 4], [2, 3, 4], [2, 3, 4]]",{},<class 'list'>
 read the first line of a string `my_string`,my_string.splitlines()[0],"{'my_string': ['str', 'int-str']}",<class 'str'>
