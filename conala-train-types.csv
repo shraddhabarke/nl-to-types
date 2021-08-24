@@ -44,7 +44,7 @@ Sort dictionary `x` by value in ascending order,"sorted(list(x.items()), key=ope
 Sort dictionary `dict1` by value in ascending order,"sorted(dict1, key=dict1.get)","{'dict1': ['dict']}",<class 'list'>
 Sort dictionary `d` by value in descending order,"sorted(d, key=d.get, reverse=True)","{'d': ['dict']}",<class 'list'>
 Sort dictionary `d` by value in ascending order,"sorted(list(d.items()), key=(lambda x: x[1]))","{'d': ['dict']}",<class 'list'>
-move the last item in list `a` to the beginning,a = a[-1:] + a[:-1],"{'a': ['list[int]', 'list[str]', 'list[bool]']}",<class 'str'>
+move the last item in list `a` to the beginning,a = a[-1:] + a[:-1],"{'a': ['list[int]', 'list[str]', 'list[bool]']}",<class 'list'>
 Parse DateTime object `datetimevariable` using format '%Y-%m-%d',datetimevariable.strftime('%Y-%m-%d'),'datetimevariable': ['datetime.datetime'],<class 'str'>
 Normalize line ends in a string 'mixed',"mixed.replace('\r\n', '\n').replace('\r', '\n')","{'mixed': ['str', 'int-str']}",<class 'str'>
 index a list `L` with another list `Idx`,T = [L[i] for i in Idx],"{'Idx': ['list[int]', 'list[str]', 'list[bool]'], 'L': ['list[int]', 'list[str]', 'list[bool]']}",<class 'list'>
@@ -77,10 +77,10 @@ split string 'fooxyzbar' based on case-insensitive matching using string 'XYZ',"
 get list of sums of neighboring integers in string `example`,"[sum(map(int, s)) for s in example.split()]","{'example': ['int-str']}",<class 'list'>
 Get all the keys from dictionary `y` whose value is `1`,[i for i in y if y[i] == 1],"{'y': ['dict']}",<class 'list'>
 converting byte string `c` in unicode string,c.decode('unicode_escape'),"{'c': ['bytestr']}",<class 'str'>
-"add key ""item3"" and value ""3"" to dictionary `default_data `",default_data['item3'] = 3,"{'default_data': ['dict']}",<class 'int'>
+"add key ""item3"" and value ""3"" to dictionary `default_data `",default_data['item3'] = 3,"{'default_data': ['dict']}",<class 'NoneType'>
 "add key ""item3"" and value ""3"" to dictionary `default_data `","default_data.update({'item3': 3, })","{'default_data': ['dict']}",<class 'NoneType'>
 "add key value pairs 'item4' , 4 and 'item5' , 5 to dictionary `default_data`","default_data.update({'item4': 4, 'item5': 5, })","{'default_data': ['dict']}",<class 'NoneType'>
-Get the first and last 3 elements of list `l`,l[:3] + l[-3:],"{'l': ['list[int]', 'list[str]', 'list[bool]']}",<class 'str'>
+Get the first and last 3 elements of list `l`,l[:3] + l[-3:],"{'l': ['list[int]', 'list[str]', 'list[bool]']}",<class 'list'>
 "For each index `x` from 0 to 3, append the element at index `x` of list `b` to the list at index `x` of list a.",[a[x].append(b[x]) for x in range(3)],"{'a': ['list[int]', 'list[str]', 'list[bool]'], 'b': ['list[int]', 'list[str]', 'list[bool]']}",<class 'list'>
 add character '@' after word 'get' in string `text`,"text = re.sub('(\\bget\\b)', '\\1@', text)","{'text': ['str', 'int-str']}",<class 'str'>
 "update dictionary `b`, overwriting values where keys are identical, with contents of dictionary `d`",b.update(d),"{'d': ['dict'], 'b': ['dict']}",<class 'NoneType'>
@@ -175,7 +175,7 @@ remove index 2 element from a list `my_list`,my_list.pop(2),"{'my_list': ['list[
 "Delete character ""M"" from a string `s` using python","s = s.replace('M', '')","{'s': ['str', 'int-str']}",<class 'str'>
 How to delete a character from a string using python?,"newstr = oldstr.replace('M', '')","{'oldstr': ['str', 'int-str']}",<class 'str'>
 get the sum of the products of each pair of corresponding elements in lists `a` and `b`,"sum(x * y for x, y in zip(a, b))","{'a': ['list[int]'], 'b': ['list[int]']}",<class 'int'>
-sum the products of each two elements at the same index of list `a` and list `b`,"sum(x * y for x, y in list(zip(a, b)))","{'a': ['list[int]'], 'b': ['list[int]']}",<class 'list'>
+sum the products of each two elements at the same index of list `a` and list `b`,"sum(x * y for x, y in list(zip(a, b)))","{'a': ['list[int]'], 'b': ['list[int]']}",<class 'int'>
 sum the product of each two items at the same index of list `a` and list `b`,"sum(i * j for i, j in zip(a, b))","{'a': ['list[int]'], 'b': ['list[int]']}",<class 'int'>
 sum the product of elements of two lists named `a` and `b`,"sum(x * y for x, y in list(zip(a, b)))","{'a': ['list[int]'], 'b': ['list[int]']}",<class 'int'>
 Add 1 to each integer value in list `my_list`,new_list = [(x + 1) for x in my_list],"{'my_list': ['list[int]']}",<class 'list'>
@@ -792,7 +792,7 @@ sort list `mylist` alphabetically,mylist.sort(key=lambda x: x.lower()),"{'mylist
 sort list `mylist` in alphabetical order,mylist.sort(key=str.lower),"{'mylist': ['list[str]']}",<class 'NoneType'>
 sort a list of strings 'mylist'.,mylist.sort(),"{'mylist': ['list[str]']}",<class 'NoneType'>
 sort a list of strings `list`,list.sort(),"{'list': ['list[str]']}",<class 'NoneType'>
-remove first word in string `s`,"s.split(' ', 1)[1]","{'s': ['str']}",<class 'list'>
+remove first word in string `s`,"s.split(' ', 1)[1]","{'s': ['str']}",<class 'str'>
 split list `l` into `n` sized lists,"[l[i:i + n] for i in range(0, len(l), n)]","{'l': ['list[int]', 'list[str]', 'list[bool]', 'list[tuple]', 'list[dict]'], 'n': ['int']}",<class 'list'>
 split a list `l` into evenly sized chunks `n`,"[l[i:i + n] for i in range(0, len(l), n)]","{'l': ['list[int]', 'list[str]', 'list[bool]', 'list[tuple]', 'list[dict]'], 'n': ['int']}",<class 'list'>
 "remove all non -word, -whitespace, or -apostrophe characters from string `doesn't this mean it -technically- works?`","re.sub(""[^\\w' ]"", '', ""doesn't this mean it -technically- works?"")",{},<class 'str'>
@@ -982,7 +982,7 @@ Extract only characters from a string as a list,"re.split('[^a-zA-Z]*', 'your st
 get the union set from list of lists `results_list`,results_union = set().union(*results_list),"{'results_list': ['nested-list']}",<class 'set'>
 get the union of values in list of lists `result_list`,return list(set(itertools.chain(*result_list))),"{'result_list': ['nested-list']}",<class 'list'>
 removing control characters from a string `s`,return ''.join(ch for ch in s if unicodedata.category(ch)[0] != 'C'),"{'s': ['str', 'int-str']}",<class 'str'>
-Compare if each value in list `a` is less than respective index value in list `b`,"all(i < j for i, j in zip(a, b))","{'a': ['list[int]', 'list[bool]', 'list[str]', 'list[tuple]', 'list[dict]'], 'b': ['list[int]', 'list[bool]', 'list[str]', 'list[tuple]', 'list[dict]']}",<class 'list'>
+Compare if each value in list `a` is less than respective index value in list `b`,"all(i < j for i, j in zip(a, b))","{'a': ['list[int]'], 'b': ['list[int]']}",<class 'bool'>
 remove duplicate characters from string 'ffffffbbbbbbbqqq',"re.sub('([a-z])\\1+', '\\1', 'ffffffbbbbbbbqqq')",{},<class 'str'>
 remove periods inbetween capital letters that aren't immediately preceeded by word character(s) in a string `s` using regular expressions,"re.sub('(?<!\\w)([A-Z])\\.', '\\1', s)","{'s': ['str', 'int-str']}",<class 'str'>
 Get a list of strings `split_text` with fixed chunk size `n` from a string `the_list`,"split_list = [the_list[i:i + n] for i in range(0, len(the_list), n)]","{'the_list': ['str', 'int-str'], 'n': ['int']}",<class 'list'>
@@ -1141,10 +1141,10 @@ remove first and last lines of string `s`,s[s.find('\n') + 1:s.rfind('\n')],"{'s
 create dict of squared int values in range of 100,{(x ** 2) for x in range(100)},{},<class 'dict'>
 "zip lists `[1, 2], [3, 4], [5, 6]` in a list","zip(*[[1, 2], [3, 4], [5, 6]])",{},<class 'zip'>
 "zip lists in a list [[1, 2], [3, 4], [5, 6]]","zip(*[[1, 2], [3, 4], [5, 6]])",{},<class 'zip'>
-get a new string from the 3rd character to the end of the string `x`,x[2:],"{'x': ['str', 'int-str']}",<class 'list'>
-get a new string including the first two characters of string `x`,x[:2],"{'x': ['str', 'int-str']}",<class 'list'>
-get a new string including all but the last character of string `x`,x[:(-2)],"{'x': ['str', 'int-str']}",<class 'list'>
-get a new string including the last two characters of string `x`,x[(-2):],"{'x': ['str', 'int-str']}",<class 'list'>
+get a new string from the 3rd character to the end of the string `x`,x[2:],"{'x': ['str', 'int-str']}",<class 'str'>
+get a new string including the first two characters of string `x`,x[:2],"{'x': ['str', 'int-str']}",<class 'str'>
+get a new string including all but the last character of string `x`,x[:(-2)],"{'x': ['str', 'int-str']}",<class 'str'>
+get a new string including the last two characters of string `x`,x[(-2):],"{'x': ['str', 'int-str']}",<class 'str'>
 get a new string with the 3rd to the second-to-last characters of string `x`,x[2:(-2)],"{'x': ['str', 'int-str']}",<class 'str'>
 reverse a string `some_string`,some_string[::(-1)],"{'some_string': ['str', 'int-str']}",<class 'str'>
 "select alternate characters of ""H-e-l-l-o- -W-o-r-l-d""",'H-e-l-l-o- -W-o-r-l-d'[::2],{},<class 'str'>
@@ -1216,7 +1216,7 @@ Determine the byte length of a utf-8 encoded string `s`,return len(s.encode('utf
 remove the last element in list `a`,del a[(-1)],"{'a': ['list[int]', 'list[str]', 'list[bool]']}",<class 'NoneType'>
 remove the element in list `a` with index 1,a.pop(1),"{'a': ['list[int]', 'list[str]', 'list[bool]']}",<class 'AnyType'>
 remove the last element in list `a`,a.pop(),"{'a': ['list[int]', 'list[str]', 'list[bool]']}",<class 'AnyType'>
-remove the element in list `a` at index `index`,a.pop(index),"{'a': ['list[int]', 'list[str]', 'list[bool]'], 'index': ['int']}",<class 'int'>
+remove the element in list `a` at index `index`,a.pop(index),"{'a': ['list[int]', 'list[str]', 'list[bool]'], 'index': ['int']}",<class 'AnyType'>
 remove the element in list `a` at index `index`,del a[index],"{'a': ['list[int]', 'list[str]', 'list[bool]'], 'index': ['int']}",<class 'NoneType'>
 convert a list of lists `list_of_lists` into a list of strings keeping empty sub-lists as empty string '',[''.join(l) for l in list_of_lists],"{'list_of_lists': ['nested-list']}",<class 'list'>
 Create new list `result` by splitting each item in list `words`,"result = [item for word in words for item in word.split(',')]","{'words': ['list[str]']}",<class 'list'>

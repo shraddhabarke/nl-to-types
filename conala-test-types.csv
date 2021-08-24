@@ -37,7 +37,7 @@ append elements of a set `b` to a list `a`,a.extend(b),"{'a': ['list[int]', 'lis
 Append elements of a set to a list in Python,a.extend(list(b)),"{'a': ['list[int]', 'list[str]', 'list[bool]'], 'b': ['set']}",<class 'NoneType'>
 Split a string `x` by last occurrence of character `-`,(x.rpartition('-')[0]),"{'x': ['str', 'int-str']}",<class 'str'>
 get the last part of a string before the character '-',"(x.rsplit('-', 1)[0])","{'x': ['str', 'int-str']}",<class 'str'>
-print a list `l` and move first 3 elements to the end of the list,(l[3:] + l[:3]),"{'l': ['list[int]', 'list[str]', 'list[bool]']}",<class 'str'>
+print a list `l` and move first 3 elements to the end of the list,(l[3:] + l[:3]),"{'l': ['list[int]', 'list[str]', 'list[bool]']}",<class 'list'>
 create a random list of integers,[int(1000 * random.random()) for i in range(10000)],{},<class 'list'>
 Using %f with strftime() in Python to get microseconds,datetime.datetime.now().strftime('%H:%M:%S.%f'),{},<class 'str'>
 convert list of lists `L` to list of integers,[int(''.join(str(d) for d in x)) for x in L],"{'L': ['nested-list']}",<class 'list'>
