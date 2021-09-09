@@ -1,0 +1,255 @@
+text,code,type,label,num-vars
+decode a hex string '4a4b4c' to UTF-8,"bytes.fromhex('4a4b4c').decode('utf-8')",<int-str>,0,0
+check if all elements in list `myList` are identical,all(x == myList[0] for x in myList),<list>,6,1
+"format number of spaces between strings `Python`, `:` and `Very Good` to be `20`","('%*s : %*s' % (20, 'Python', 20, 'Very Good'))",<str>,2,0
+get rid of None values in dictionary `kwargs`,"res = {k: v for k, v in list(kwargs.items()) if v is not None}",<dict>,12,1
+get rid of None values in dictionary `kwargs`,"res = dict((k, v) for k, v in kwargs.items() if v is not None)",<dict>,12,1
+"concatenate a list of strings `['a', 'b', 'c']`",""""""""""""".join(['a', 'b', 'c'])",<str-list>,7,0
+Format a datetime string `when` to extract date only,"then = datetime.datetime.strptime(when, '%Y-%m-%d').date()",<datetime-str>,18,1
+split a multi-line string `inputString` into separate strings,inputString.split('\n'),<str>,2,1
+Split a multi-line string ` a \n b \r\n c ` by new line character `\n`,' a \n b \r\n c '.split('\n'),<str>,2,0
+"concatenate elements of list `b` by a colon "":""",""""""":"""""".join(str(x) for x in b)",<list>,6,1
+concatenate items of list `l` with a space ' ',"(' '.join(map(str, l)))",<list>,6,1
+How can I parse a time string containing milliseconds in it with python?,"time.strptime('30/03/09 16:31:32.123', '%d/%m/%y %H:%M:%S.%f')",<datetime-str>,18,0
+convert a string `my_string` with dot and comma into a float number `my_float`,"my_float = float(my_string.replace(',', ''))",<int-str>,0,1
+"convert a string `123,456.908` with dot and comma into a floating number","float('123,456.908'.replace(',', ''))",<int-str>,0,0
+"split string 'Words, words, words.' using a regex '(\\W+)'","re.split('(\\W+)', 'Words, words, words.')",<str>,2,0
+remove key 'c' from dictionary `d`,{i: d[i] for i in d if i != 'c'},<str-dict>,13,1
+Split a string `s` by space with `4` splits,"s.split(' ', 4)",<str>,2,1
+cut off the last word of a sentence `content`,""""""" """""".join(content.split(' ')[:-1])",<str>,2,1
+sum all elements of nested list `L`,"sum(sum(i) if isinstance(i, list) else i for i in L)",<nested-list>,8,1
+Multiple each value by `2` for all keys in a dictionary `my_dict`,"my_dict.update((x, y * 2) for x, y in list(my_dict.items()))",<int-dict>,11,1
+"Join elements of list `l` with a comma `,`",""""""","""""".join(l)",<list>,6,1
+make a comma-separated string from a list `myList`,"myList = ','.join(map(str, myList))",<list>,6,1
+reverse the list that contains 1 to 10,list(reversed(list(range(10)))),<int>,9,0
+"remove substring 'bag,' from a string 'lamp, bag, mirror'","('lamp, bag, mirror'.replace('bag,', ''))",<str>,2,0
+"Reverse the order of words, delimited by `.`, in string `s`","""""""."""""".join(s.split('.')[::-1])",<str>,2,1
+convert epoch time represented as milliseconds `s` to string using format '%Y-%m-%d %H:%M:%S.%f',datetime.datetime.fromtimestamp(s).strftime('%Y-%m-%d %H:%M:%S.%f'),<int>,9,1
+parse milliseconds epoch time '1236472051807' to format '%Y-%m-%d %H:%M:%S',"time.strftime('%Y-%m-%d %H:%M:%S', time.gmtime(1236472051807 / 1000.0))",<int>,9,0
+get the date 7 days before the current date,(datetime.datetime.now() - datetime.timedelta(days=7)).date(),<datetime>,3,0
+sum elements at index `column` of each list in list `data`,(sum(row[column] for row in data)),<nested-list>,8,1
+sum columns of a list `array`,[sum(row[i] for row in array) for i in range(len(array[0]))],<nested-list>,8,1
+encode binary string 'your string' to base64 code,"base64.b64encode(bytes('your string', 'utf-8'))",<int-str>,0,1
+combine list of dictionaries `dicts` with the same keys in each list to a single dictionary,"dict((k, [d[k] for d in dicts]) for k in dicts[0])",<dict-list>,1,1
+Merge a nested dictionary `dicts` into a flat dictionary by concatenating nested values with the same key `k`,{k: [d[k] for d in dicts] for k in dicts[0]},<nested-dict>,14,1
+identify duplicate values in list `mylist`,"[k for k, v in list(collections.Counter(mylist).items()) if v > 1]",<list>,6,1
+flatten list `list_of_menuitems`,[image for menuitem in list_of_menuitems for image in menuitem],<nested-list>,8,1
+append elements of a set `b` to a list `a`,a.extend(b),<list>,6,2
+Append elements of a set to a list in Python,a.extend(list(b)),<list>,6,2
+Split a string `x` by last occurrence of character `-`,(x.rpartition('-')[0]),<str>,2,1
+get the last part of a string before the character '-',"(x.rsplit('-', 1)[0])",<str>,2,1
+print a list `l` and move first 3 elements to the end of the list,(l[3:] + l[:3]),<list>,6,1
+create a random list of integers,[int(1000 * random.random()) for i in range(10000)],<int>,9,0
+Using %f with strftime() in Python to get microseconds,datetime.datetime.now().strftime('%H:%M:%S.%f'),<datetime>,3,0
+convert list of lists `L` to list of integers,[int(''.join(str(d) for d in x)) for x in L],<nested-list>,8,1
+combine elements of each list in list `L` into digits of a single integer,[''.join(str(d) for d in x) for x in L],<nested-list>,8,1
+convert a list of lists `L` to list of integers,L = [int(''.join([str(y) for y in x])) for x in L],<nested-list>,8,1
+removing an element from a list based on a predicate 'X' or 'N',"[x for x in ['AAT', 'XAC', 'ANT', 'TTA'] if 'X' not in x and 'N' not in x]",<str-list>,7,0
+search for string that matches regular expression pattern '(?<!Distillr)\\\\AcroTray\\.exe' in string 'C:\\SomeDir\\AcroTray.exe',"re.search('(?<!Distillr)\\\\AcroTray\\.exe', 'C:\\SomeDir\\AcroTray.exe')",<str>,2,0
+split string 'QH QD JC KD JS' into a list on white spaces,"""""""QH QD JC KD JS"""""".split()",<str>,2,0
+convert a string into datetime using the format '%Y-%m-%d %H:%M:%S.%f',"datetime.datetime.strptime(string_date, '%Y-%m-%d %H:%M:%S.%f')",<datetime-str>,18,1
+find the index of a list with the first element equal to '332' within the list of lists `thelist`,"[index for index, item in enumerate(thelist) if item[0] == '332']",<nested-list>,8,1
+lower a string `text` and remove non-alphanumeric characters aside from space,"re.sub('[^\\sa-zA-Z0-9]', '', text).lower().strip()",<str>,2,1
+remove all non-alphanumeric characters except space from a string `text` and lower it,"re.sub('(?!\\s)[\\W_]', '', text).lower().strip()",<str>,2,1
+loop over a list `mylist` if sublists length equals 3,[x for x in mylist if len(x) == 3],<nested-list>,8,1
+use `%s` operator to print variable values `str1` inside a string,"'first string is: %s, second one is: %s' % (str1, 'geo.tif')",<str>,2,1
+Split a string by a delimiter in python,[x.strip() for x in '2.MATCHES $$TEXT$$ STRING'.split('$$TEXT$$')],<str>,2,0
+Replace a separate word 'H3' by 'H1' in a string 'text',"re.sub('\\bH3\\b', 'H1', text)",<str>,2,1
+substitute ASCII letters in string 'aas30dsa20' with empty string '',"re.sub('\\D', '', 'aas30dsa20')",<int-str>,0,0
+get digits only from a string `aas30dsa20` using lambda function,""""""""""""".join([x for x in 'aas30dsa20' if x.isdigit()])",<int-str>,0,0
+"count the occurrences of item ""a"" in list `l`",l.count('a'),<str-list>,7,1
+count the occurrences of items in list `l`,Counter(l),<list>,6,1
+count the occurrences of items in list `l`,"[[x, l.count(x)] for x in set(l)]",<list>,6,1
+count the occurrences of items in list `l`,"dict(((x, l.count(x)) for x in set(l)))",<list>,6,1
+"count the occurrences of item ""b"" in list `l`",l.count('b'),<str-list>,7,1
+find the key associated with the largest value in dictionary `x` whilst key is non-zero value,"max(k for k, v in x.items() if v != 0)",<int-dict>,11,1
+get the largest key whose not associated with value of 0 in dictionary `x`,"(k for k, v in x.items() if v != 0)",<int-dict>,11,1
+get the largest key in a dictionary `x` with non-zero value,"max(k for k, v in x.items() if v != 0)",<int-dict>,11,1
+remove key 'ele' from dictionary `d`,del d['ele'],<str-dict>,13,1
+merge list `['it']` and list `['was']` and list `['annoying']` into one list,['it'] + ['was'] + ['annoying'],<str-list>,7,0
+increment a value with leading zeroes in a number `x`,str(int(x) + 1).zfill(len(x)),<int-str>,0,1
+Convert tuple `t` to list,list(t),<tuple>,17,1
+Convert list `l` to tuple,tuple(l),<list>,6,1
+Convert tuple `level1` to list,"level1 = map(list, level1)",<tuple>,17,1
+split a string `s` with into all strings of repeated characters,"[m.group(0) for m in re.finditer('(\\d)\\1*', s)]",<str>,2,1
+Get reverse of list items from list 'b' using extended slicing,[x[::-1] for x in b],<tuple-list>,19,1
+convert list `list_of_ints` into a comma separated string,""""""","""""".join([str(i) for i in list_of_ints])",<int-list>,20,1
+"Find last occurrence of character '}' in string ""abcd}def}""",'abcd}def}'.rfind('}'),<str>,2,0
+"Iterate ove list `[1, 2, 3]` using list comprehension","([item for item in [1, 2, 3]])",<int-list>,20,0
+extract all the values with keys 'x' and 'y' from a list of dictionaries `d` to list of tuples,"[(x['x'], x['y']) for x in d]",<dict-list>,1,1
+create a dictionary by adding each two adjacent elements in tuple `x` as key/value pair to it,"dict(x[i:i + 2] for i in range(0, len(x), 2))",<tuple>,17,1
+"create a list containing flattened list `[['A', 'B', 'C'], ['D', 'E', 'F'], ['G', 'H', 'I']]`","values = sum([['A', 'B', 'C'], ['D', 'E', 'F'], ['G', 'H', 'I']], [])",<nested-list>,8,0
+create a list containing each two adjacent letters in string `word` as its elements,"[(x + y) for x, y in zip(word, word[1:])]",<str>,2,1
+Get a list of pairs from a string `word` using lambda function,"list(map(lambda x, y: x + y, word[:-1], word[1:]))",<str>,2,1
+extract a url from a string `myString`,"(re.findall('(https?://[^\\s]+)', myString))",<str>,2,1
+extract a url from a string `myString`,"(re.search('(?P<url>https?://[^\\s]+)', myString).group('url'))",<str>,2,1
+"remove all special characters, punctuation and spaces from a string `mystring` using regex","re.sub('[^A-Za-z0-9]+', '', mystring)",<str>,2,1
+replace spaces with underscore,"mystring.replace(' ', '_')",<str>,2,1
+split string `my_string` on white spaces,""""""" """""".join(my_string.split())",<str>,2,1
+get a list containing the sum of each element `i` in list `l` plus the previous elements,"[sum(l[:i]) for i, _ in enumerate(l)]",<int-list>,20,1
+split a string `Docs/src/Scripts/temp` by `/` keeping `/` in the result,"""""""Docs/src/Scripts/temp"""""".replace('/', '/\x00/').split('\x00')",<str>,2,0
+check characters of string `string` are true predication of function `predicate`,all(predicate(x) for x in string),<str>,2,1
+convert string `user_input` into a list of integers `user_list`,"user_list = [int(number) for number in user_input.split(',')]",<str>,2,1
+Get a list of integers by splitting  a string `user` with comma,"[int(s) for s in user.split(',')]",<str>,2,1
+Sorting a Python list by two criteria,"sorted(list, key=lambda x: (x[0], -x[1]))",<list>,6,1
+"sort a list of objects `ut`, based on a function `cmpfun` in descending order","ut.sort(key=cmpfun, reverse=True)",<list>,6,1
+reverse list `ut` based on the `count` attribute of each object,"ut.sort(key=lambda x: x.count, reverse=True)",<list>,6,1
+sort a list of objects `ut` in reverse order by their `count` property,"ut.sort(key=lambda x: x.count, reverse=True)",<list>,6,1
+cast an int `i` to a string and concat to string 'ME','ME' + str(i),<int>,9,0
+sort a list `l` by length of value in tuple,"l.sort(key=lambda t: len(t[1]), reverse=True)",<tuple-list>,19,1
+split string `s` by words that ends with 'd',"re.findall('\\b(\\w+)d\\b', s)",<str>,2,1
+return `True` if string `foobarrrr` contains regex `ba[rzd]`,"bool(re.search('ba[rzd]', 'foobarrrr'))",<str>,2,0
+Removing duplicates in list `t`,list(set(t)),<list>,6,1
+Removing duplicates in list `source_list`,list(set(source_list)),<list>,6,1
+Removing duplicates in list `abracadabra`,list(OrderedDict.fromkeys('abracadabra')),<list>,6,1
+convert elements of each tuple in list `l` into a string  separated by character `@`,""""""" """""".join([('%d@%d' % t) for t in l])",<tuple-list>,19,1
+convert each tuple in list `l` to a string with '@' separating the tuples' elements,""""""" """""".join([('%d@%d' % (t[0], t[1])) for t in l])",<tuple-list>,19,1
+Sort dictionary `o` in ascending order based on its keys and items,sorted(o.items()),<int-dict>,11,1
+get sorted list of keys of dict `d`,sorted(d),<int-dict>,11,1
+How to sort dictionaries by keys in Python,sorted(d.items()),<int-dict>,11,1
+"convert string ""1"" into integer",int('1'),<int-str>,0,0
+function to convert strings into integers,int(),<str>,2,0
+convert items in tuple `T1` to integers,"T2 = [map(int, x) for x in T1]",<tuple>,17,1
+combine lists `l1` and `l2`  by alternating their elements,"[val for pair in zip(l1, l2) for val in pair]",<list>,6,2
+group a list of dicts `LD` into one dict by key,"(dict(zip(LD[0], zip(*[list(d.values()) for d in LD]))))",<dict-list>,1,1
+How do I sum the first value in each tuple in a list of tuples in Python?,sum([pair[0] for pair in list_of_pairs]),<tuple-list>,19,1
+"convert unicode string u""{'code1':1,'code2':1}"" into dictionary","d = ast.literal_eval(""{'code1':1,'code2':1}"")",<int-str>,0,0
+find all words in a string `mystring` that start with the `$` sign,[word for word in mystring.split() if word.startswith('$')],<str>,2,1
+Convert unix timestamp '1347517370' to formatted string '%Y-%m-%d %H:%M:%S',"time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(1347517370))",<datetime-str>,18,0
+separate words delimited by one or more spaces into a list,"re.split(' +', 'hello world sample text')",<str>,2,0
+length of longest element in list `words`,"len(max(words, key=len))",<str-list>,7,1
+swap keys with values in a dictionary `a`,"res = dict((v, k) for k, v in a.items())",<dict>,12,1
+Check if any key in the dictionary `dict1` starts with the string `EMP$$`,any(key.startswith('EMP$$') for key in dict1),<str-dict>,13,1
+create list of values from dictionary `dict1` that have a key that starts with 'EMP$$',"[value for key, value in list(dict1.items()) if key.startswith('EMP$$')]",<str-dict>,13,1
+print elements of list `list` seperated by tabs `\t`,"('\t'.join(map(str, list)))",<list>,6,1
+Encode a latin character in string `Sopet\xc3\xb3n` properly,'Sopet\xc3\xb3n'.encode('latin-1').decode('utf-8'),<str>,2,0
+"regex, find ""n""s only in the middle of string `s`","re.findall('n(?<=[^n]n)n+(?=[^n])(?i)', s)",<str>,2,1
+display the float `1/3*100` as a percentage,('{0:.0f}%'.format(1.0 / 3 * 100)),<float>,4,0
+sort a list of dictionary `mylist` by the key `title`,mylist.sort(key=lambda x: x['title']),<dict-list>,1,1
+sort a list `l` of dicts by dict value 'title',l.sort(key=lambda x: x['title']),<dict-list>,1,1
+"sort a list of dictionaries by the value of keys 'title', 'title_url', 'id' in ascending order.","l.sort(key=lambda x: (x['title'], x['title_url'], x['id']))",<dict-list>,1,1
+find 10 largest differences between each respective elements of list `l1` and list `l2`,"heapq.nlargest(10, range(len(l1)), key=lambda i: abs(l1[i] - l2[i]))",<int-list>,20,2
+Extract brackets from string `s`,"brackets = re.sub('[^(){}[\\]]', '', s)",<str>,2,1
+remove duplicate elements from list 'L',"list(dict((x[0], x) for x in L).values())",<list>,6,1
+get the position of item 1 in `testlist`,"[i for (i, x) in enumerate(testlist) if (x == 1)]",<int-list>,20,1
+get the position of item 1 in `testlist`,"[i for (i, x) in enumerate(testlist) if (x == 1)]",<int-list>,20,1
+get the position of item 1 in `testlist`,"for i in [i for (i, x) in enumerate(testlist) if (x == 1)]:\npass",<int-list>,20,1
+get the position of item 1 in `testlist`,"for i in (i for (i, x) in enumerate(testlist) if (x == 1)):\npass",<int-list>,20,1
+get the position of item 1 in `testlist`,"gen = (i for (i, x) in enumerate(testlist) if (x == 1))\nfor i in gen:pass",<int-list>,20,1
+get the position of item `element` in list `testlist`,(testlist.index(element)),<list>,6,1
+get the position of item `element` in list `testlist`,"try:\n(testlist.index(element))\nexcept ValueError:\npass",<list>,6,1
+find the first element of the tuple with the maximum second element in a list of tuples `lis`,"max(lis, key=lambda item: item[1])[0]",<tuple-list>,19,1
+get the item at index 0 from the tuple that has maximum value at index 1 in list `lis`,"max(lis, key=itemgetter(1))[0]",<tuple-list>,19,1
+convert list of tuples `L` to a string,""""""", """""".join('(' + ', '.join(i) + ')' for i in L)",<tuple-list>,19,1
+convert a list  into a generator object,"(n for n in [1, 2, 3, 5])",<list>,6,0
+remove elements from list `oldlist` that have an index number mentioned in list `removelist`,"newlist = [v for i, v in enumerate(oldlist) if i not in removelist]",<list>,6,2
+"convert tuple of tuples `(('aa',), ('bb',), ('cc',))` to tuple","from functools import reduce\nreduce(lambda a, b: a + b, (('aa',), ('bb',), ('cc',)))",<tuple>,17,0
+"convert tuple of tuples `(('aa',), ('bb',), ('cc',))` to list in one line","map(lambda a: a[0], (('aa',), ('bb',), ('cc',)))",<tuple>,17,0
+"unzip the list `[('a', 1), ('b', 2), ('c', 3), ('d', 4)]`","zip(*[('a', 1), ('b', 2), ('c', 3), ('d', 4)])",<tuple-list>,19,0
+"unzip the list `[('a', 1), ('b', 2), ('c', 3), ('d', 4)]`","zip(*[('a', 1), ('b', 2), ('c', 3), ('d', 4)])",<tuple-list>,19,0
+unzip list `original`,"result = ([a for (a, b) in original], [b for (a, b) in original])",<tuple-list>,19,1
+unzip list `original` and return a generator,"result = ((a for (a, b) in original), (b for (a, b) in original))",<tuple-list>,19,1
+"unzip list `[('a', 1), ('b', 2), ('c', 3), ('d', 4), ('e', )]`","zip(*[('a', 1), ('b', 2), ('c', 3), ('d', 4), ('e',)])",<tuple-list>,19,0
+"unzip list `[('a', 1), ('b', 2), ('c', 3), ('d', 4), ('e', )]` and fill empty results with None","map(None, *[('a', 1), ('b', 2), ('c', 3), ('d', 4), ('e',)])",<tuple-list>,19,0
+"Add key ""mynewkey"" to dictionary `d` with value ""mynewvalue""",d['mynewkey'] = 'mynewvalue',<str-dict>,13,0
+Add key 'a' to dictionary `data` with value 1,"data.update({'a': 1, })",<int-dict>,11,1
+Add key 'a' to dictionary `data` with value 1,data.update(dict(a=1)),<int-dict>,11,1
+Add key 'a' to dictionary `data` with value 1,data.update(a=1),<int-dict>,11,1
+Round number `answer` to 2 precision after the decimal point,"answer = str(round(answer, 2))",<int>,9,1
+Python split a string using regex,"re.findall('(.+?):(.+?)\\b ?', text)",<str>,2,1
+"generate all 2-element subsets of tuple `(1, 2, 3)`","list(itertools.combinations((1, 2, 3), 2))",<tuple>,17,0
+Get a new list `list2`by removing empty list from a list of lists `list1`,list2 = [x for x in list1 if x != []],<nested-list>,8,1
+Create `list2` to contain the lists from list `list1` excluding the empty lists from `list1`,list2 = [x for x in list1 if x],<nested-list>,8,1
+get all text that is not enclosed within square brackets in string `example_str`,"re.findall('(.*?)\\[.*?\\]', example_str)",<str>,2,1
+Use a regex to get all text in a string `example_str` that is not surrounded by square brackets,"re.findall('(.*?)(?:\\[.*?\\]|$)', example_str)",<str>,2,1
+"get whatever is between parentheses as a single match, and any char outside as an individual match in string '(zyx)bc'","re.findall('\\(.+?\\)|\\w', '(zyx)bc')",<str>,2,0
+match regex '\\((.*?)\\)|(\\w)' with string '(zyx)bc',"re.findall('\\((.*?)\\)|(\\w)', '(zyx)bc')",<str>,2,0
+match multiple regex patterns with the alternation operator `|` in a string `(zyx)bc`,"re.findall('\\(.*?\\)|\\w', '(zyx)bc')",<str>,2,0
+formate each string cin list `elements` into pattern '%{0}%',elements = ['%{0}%'.format(element) for element in elements],<str-list>,7,1
+get list of values from dictionary 'mydict' w.r.t. list of keys 'mykeys',[mydict[x] for x in mykeys],<dict>,12,1
+"convert list `[('Name', 'Joe'), ('Age', 22)]` into a dictionary","dict([('Name', 'Joe'), ('Age', 22)])",<tuple-list>,19,0
+split a string into a list of words and whitespace,"re.split('(\\W+)', s)",<str>,2,1
+reverse the keys and values in a dictionary `myDictionary`,{i[1]: i[0] for i in list(myDictionary.items())},<dict>,12,1
+finding the index of elements containing substring 'how' and 'what' in a list of strings 'myList'.,"[i for i, j in enumerate(myList) if 'how' in j.lower() or 'what' in j.lower()]",<str-list>,7,1
+check if object `obj` is a string,"isinstance(obj, str)",<any>,15,1
+check if object `o` is a string,"isinstance(o, str)",<any>,15,1
+check if object `o` is a string,(type(o) is str),<any>,15,1
+check if object `o` is a string,"isinstance(o, str)",<any>,15,1
+check if `obj_to_test` is a string,"isinstance(obj_to_test, str)",<any>,15,1
+append list `list1` to `list2`,list2.extend(list1),<list>,6,2
+append list `mylog` to `list1`,list1.extend(mylog),<list>,6,2
+append list `a` to `c`,c.extend(a),<list>,6,2
+append a tuple of elements from list `a` with indexes '[0][0] [0][2]' to list `b`,"b.append((a[0][0], a[0][2]))",<tuple-list>,19,1
+find the index of an element 'MSFT' in a list `stocks_list`,[x for x in range(len(stocks_list)) if stocks_list[x] == 'MSFT'],<str-list>,7,1
+remove symbols from a string `s`,"re.sub('[^\\w]', ' ', s)",<str>,2,1
+Find octal characters matches from a string `str` using regex,"(re.findall(""'\\\\[0-7]{1,3}'"", str))",<str>,2,1
+split string `input` based on occurrences of regex pattern '[ ](?=[A-Z]+\\b)',"re.split('[ ](?=[A-Z]+\\b)', input)",<str>,2,1
+Split string `input` at every space followed by an upper-case letter,"re.split('[ ](?=[A-Z])', input)",<str>,2,1
+get a list from a list `lst` with values mapped into a dictionary `dct`,[dct[k] for k in lst],<list>,6,2
+truncate float 1.923328437452 to 3 decimal places,"round(1.923328437452, 3)",<float>,4,0
+sort list `li` in descending order based on the date value in second element of each list in list `li`,"sorted(li, key=lambda x: datetime.strptime(x[1], '%d/%m/%Y'), reverse=True)",<nested-list>,8,1
+get number of keys in dictionary `yourdict`,len(list(yourdict.keys())),<dict>,12,1
+"Sum integers contained in strings in list `['', '3.4', '', '', '1.0']`","sum(int(float(item)) for item in [_f for _f in ['', '3.4', '', '', '1.0'] if _f])",<str-list>,7,0
+Get the length of list `my_list`,len(my_list),<list>,6,1
+Getting the length of array `l`,len(l),<list>,6,1
+Getting the length of array `s`,len(s),<list>,6,1
+Getting the length of `my_tuple`,len(my_tuple),<tuple>,17,1
+Getting the length of `my_string`,len(my_string),<str>,2,1
+replace each 'a' with 'b' and each 'b' with 'a' in the string 'obama' in a single pass.,"""""""obama"""""".replace('a', '%temp%').replace('b', 'a').replace('%temp%', 'b')",<str>,2,0
+reverse sort Counter `x` by values,"sorted(x, key=x.get, reverse=True)",<int-dict>,11,1
+reverse sort counter `x` by value,"sorted(list(x.items()), key=lambda pair: pair[1], reverse=True)",<int-dict>,11,1
+sort a list of lists 'c2' such that third row comes first,c2.sort(key=lambda row: row[2]),<nested-list>,8,1
+Sorting a list of lists in Python,"c2.sort(key=lambda row: (row[2], row[1], row[0]))",<nested-list>,8,1
+Sorting a list of lists in Python,"c2.sort(key=lambda row: (row[2], row[1]))",<nested-list>,8,1
+add an item with key 'third_key' and value 1 to an dictionary `my_dict`,my_dict.update({'third_key': 1}),<int-dict>,11,1
+declare an array,my_list = [],<list>,6,0
+Insert item `12` to a list `my_list`,my_list.append(12),<int-list>,20,1
+add an entry 'wuggah' at the beginning of list `myList`,"myList.insert(0, 'wuggah')",<str-list>,7,1
+get the type of `i`,type(i),<any>,15,1
+determine the type of variable `v`,type(v),<any>,15,1
+determine the type of variable `v`,type(v),<any>,15,1
+determine the type of variable `v`,type(v),<any>,15,1
+determine the type of variable `v`,type(v),<any>,15,1
+get the type of variable `variable_name`,(type(variable_name)),<any>,15,1
+get the 5th item of a generator,"next(itertools.islice(range(10), 5, 5 + 1))",<list>,6,0
+join a list of strings `list` using a space ' ',""""""" """""".join(list)",<str-list>,7,1
+Print a string `word` with string format,"('""{}""'.format(word))",<str>,2,1
+join a list of strings `list` using a space ' ',""""""" """""".join(list)",<str-list>,7,1
+create list `y` containing two empty lists,y = [[] for n in range(2)],<list>,6,0
+delete all occurrences of character 'i' in string 'it is icy',""""""""""""".join([char for char in 'it is icy' if char != 'i'])",<str>,2,0
+delete all instances of a character 'i' in a string 'it is icy',"re.sub('i', '', 'it is icy')",<str>,2,0
+"delete all characters ""i"" in string ""it is icy""","""""""it is icy"""""".replace('i', '')",<str>,2,0
+How to delete all instances of a character in a string in python?,""""""""""""".join([char for char in 'it is icy' if char != 'i'])",<str>,2,0
+converting list of strings `intstringlist` to list of integer `nums`,nums = [int(x) for x in intstringlist],<str-list>,7,1
+round off the float that is the product of `2.52 * 100` and convert it to an int,int(round(2.51 * 100)),<float>,4,0
+Sum the corresponding decimal values for binary values of each boolean element in list `x`,"sum(1 << i for i, b in enumerate(x) if b)",<bool-list>,1
+Convert list of lists `data` into a flat list,"[y for x in data for y in (x if isinstance(x, list) else [x])]",<nested-list>,8,1
+"remove last comma character ',' in string `s`",""""""""""""".join(s.rsplit(',', 1))",<str>,2,1
+"find the string in `your_string` between two special characters ""["" and ""]""","re.search('\\[(.*)\\]', your_string).group(1)",<str>,2,1
+count number of times string 'brown' occurred in string 'The big brown fox is brown',"""""""The big brown fox is brown"""""".count('brown')",<str>,2,0
+split string `text` by space,text.split(),<str>,2,1
+"split string `text` by "",""","text.split(',')",<str>,2,1
+Split string `line` into a list by whitespace,line.split(),<str>,2,1
+replace dot characters  '.' associated with ascii letters in list `s` with space ' ',"[re.sub('(?<!\\d)\\.(?!\\d)', ' ', i) for i in s]",<str-list>,7,1
+sort list `list_of_strings` based on second index of each string `s`,"sorted(list_of_strings, key=lambda s: s.split(',')[1])",<str-list>,7,1
+eliminate all strings from list `lst`,"[element for element in lst if isinstance(element, int)]",<str-list>,7,1
+get all the elements except strings from the list 'lst'.,"[element for element in lst if not isinstance(element, str)]",<str-list>,7,1
+"concatenate array of strings `['A', 'B', 'C', 'D']` into a string",""""""""""""".join(['A', 'B', 'C', 'D'])",<str-list>,7,0
+Remove all strings from a list a strings `sents` where the values starts with `@$\t` or `#`,[x for x in sents if not x.startswith('@$\t') and not x.startswith('#')],<str-list>,7,1
+sort a list of dictionary `list` first by key `points` and then by `time`,"list.sort(key=lambda item: (item['points'], item['time']))",<dict-list>,1,1
+"convert datetime object `(1970, 1, 1)` to seconds","(t - datetime.datetime(1970, 1, 1)).total_seconds()",<datetime>,3,1
+insert `_suff` before the file extension in `long.file.name.jpg` or replace `_a` with `suff` if it precedes the extension.,"re.sub('(\\_a)?\\.([^\\.]*)$', '_suff.\\2', 'long.file.name.jpg')",<str>,2,0
+Convert integer `number` into an unassigned integer,"struct.unpack('H', struct.pack('h', number))",<int>,9,1
+convert int values in list `numlist` to float,numlist = [float(x) for x in numlist],<int-list>,20,1
+Create a list containing all ascii characters as its elements,[chr(i) for i in range(127)],<str>,2,0
+python regex - check for a capital letter with a following lowercase in string `string`,"re.sub('^[A-Z0-9]*(?![a-z])', '', string)",<str>,2,1
+get the last key of dictionary `dict`,list(dict.keys())[-1],<dict>,12,1
+convert unicode string `s` to ascii,s.encode('iso-8859-15'),<int-str>,0,1
+Find all numbers and dots from a string `text` using regex,"re.findall('Test([0-9.]*[0-9]+)', text)",<int-str>,0,1
+python regex  to find all numbers and dots from 'text',"re.findall('Test([\\d.]*\\d+)', text)",<int-str>,0,1
+Sort a list of tuples `b` by third item in the tuple,b.sort(key=lambda x: x[1][2]),<tuple-list>,19,1
+create a datetime with the current date & time,datetime.datetime.now(),<datetime>,3,0
+get the index of an integer `1` from a list `lst` if the list also contains boolean items,"next(i for i, x in enumerate(lst) if not isinstance(x, bool) and x == 1)",<int-list>,20,1
+subtract 13 from every number in a list `a`,a[:] = [(x - 13) for x in a],<int-list>,20,1
+split a string `mystring` considering the spaces ' ',"mystring.replace(' ', '! !').split('!')",<str>,2,1
+sum elements at the same index in list `data`,[[sum(item) for item in zip(*items)] for items in zip(*data)],<nested-list>,8,1
