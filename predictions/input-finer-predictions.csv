@@ -1,4 +1,4 @@
-text,code,type,label,prediction
+text,code,label,prediction
 decode a hex string '4a4b4c' to UTF-8,bytes.fromhex('4a4b4c').decode('utf-8'),<int-str>,<int-str>
 check if all elements in list `myList` are identical,all(x == myList[0] for x in myList),<list>,<list>
 "format number of spaces between strings `Python`, `:` and `Very Good` to be `20`","('%*s : %*s' % (20, 'Python', 20, 'Very Good'))",<str>,<str>
