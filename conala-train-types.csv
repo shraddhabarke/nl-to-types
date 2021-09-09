@@ -86,7 +86,7 @@ add character '@' after word 'get' in string `text`,"text = re.sub('(\\bget\\b)'
 "update dictionary `b`, overwriting values where keys are identical, with contents of dictionary `d`",b.update(d),"{'d': ['dict'], 'b': ['dict']}",<class 'NoneType'>
 add unicode string '1' to UTF-8 decoded string '\xc2\xa3',('\xc2\xa3' + '1'),{},<class 'str'>
 lower-case the string obtained by replacing the occurrences of regex pattern '(?<=[a-z])([A-Z])' in string `s` with replacement '-\\1',"re.sub('(?<=[a-z])([A-Z])', '-\\1', s).lower()","{'s': ['str', 'int-str']}",<class 'str'>
-format a string `num` using string formatting,"""""""{0:.3g}"""""".format(num)","{'num': ['str', 'int-str']}",<class 'str'>
+format an integer `num` using string formatting,"""""""{0:.3g}"""""".format(num)","{'num': ['int']}",<class 'str'>
 convert radians 1 to degrees,math.cos(math.radians(1)),{},<class 'float'>
 count the number of integers in list `a`,"sum(isinstance(x, int) for x in a)","{'a': ['list[int]', 'list[bool]', 'list[str]']}",<class 'int'>
 replacing  '\u200b' with '*' in a string  using regular expressions,"'used\u200b'.replace('\u200b', '*')",{},<class 'str'>
@@ -260,9 +260,9 @@ sort list `l` by index 2 of the item,"sorted(l, key=(lambda x: x[2]))","{'l': ['
 "match a sharp, followed by letters (including accent characters) in string `str1` using a regex","hashtags = re.findall('#(\\w+)', str1, re.UNICODE)","{'str1': ['str', 'int-str']}",<class 'list'>
 get the next value greatest to `2` from a list of numbers `num_list`,min([x for x in num_list if x > 2]),"{'num_list': ['list[int]']}",<class 'int'>
 sort list `lst` with positives coming before negatives with values sorted respectively,"sorted(lst, key=lambda x: (x < 0, x))","{'lst': ['list[int]']}",<class 'list'>
-get the date 6 months from today,six_months = (date.today() + relativedelta(months=(+ 6))),,<class 'datetime'>
-get the date 1 month from today,"(date(2010, 12, 31) + relativedelta(months=(+ 1)))",,<class 'datetime'>
-get the date 2 months from today,"(date(2010, 12, 31) + relativedelta(months=(+ 2)))",,<class 'datetime'>
+get the date 6 months from today,six_months = (date.today() + relativedelta(months=(+ 6))),{},<class 'datetime'>
+get the date 1 month from today,"(date(2010, 12, 31) + relativedelta(months=(+ 1)))",{},<class 'datetime'>
+get the date 2 months from today,"(date(2010, 12, 31) + relativedelta(months=(+ 2)))",{},<class 'datetime'>
 calculate the date six months from the current date,((datetime.date.today() + datetime.timedelta(((6 * 365) / 12))).isoformat()),{},<class 'str'>
 get a list of keys of dictionary `things` sorted by the value of nested dictionary key 'weight',"sorted(list(things.keys()), key=lambda x: things[x]['weight'], reverse=True)","{'things': ['nested-dict']}",<class 'list'>
 list comprehension that produces integers between 11 and 19,[i for i in range(100) if i > 10 if i < 20],{},<class 'list'>
@@ -330,7 +330,7 @@ create a set from string `s` to remove duplicate characters,(' '.join(set(s))),"
 find the count of a word 'Hello' in a string `input_string`,input_string.count('Hello'),"{'input_string': ['str', 'int-str']}",<class 'int'>
 "reduce the first element of list of strings `data` to a string, separated by '.'",('.'.join([item[0] for item in data])),"{'data': ['list[str]']}",<class 'str'>
 "convert a flat list into a list of tuples of every two items in the list, in order","(zip(my_list[0::2], my_list[1::2]))","{'my_list': ['list[int]', 'list[str]', 'list[bool]']}",<class 'zip'>
-group a list of ints into a list of tuples of each 2 elements,"my_new_list = zip(my_list[0::2], my_list[1::2])","{'my_list': ['list[int]', 'list[str]', 'list[bool]']}",<class 'zip'>
+group a list of ints into a list of tuples of each 2 elements,"my_new_list = zip(my_list[0::2], my_list[1::2])","{'my_list': ['list[int]']}",<class 'zip'>
 Formate current date and time to a string using pattern '%Y-%m-%d %H:%M:%S',datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),{},<class 'str'>
 retrieve arabic texts from string `my_string`,"(re.findall('[\\u0600-\\u06FF]+', my_string))","{'my_string': ['str', 'int-str']}",<class 'list'>
 access value associated with key 'American' of key 'Apple' from dictionary `dict`,dict['Apple']['American'],"{'dict': ['nested-dict']}",<class 'AnyType'>
@@ -479,7 +479,6 @@ Print string `t` with proper unicode representations,(t.decode('unicode_escape')
 Normalize string `str` from 'cp1252' code to 'utf-8' code,(str.encode('cp1252').decode('utf-8').encode('cp1252').decode('utf-8')),"{'str': ['str']}",<class 'str'>
 merge lists `list_a` and `list_b` into a list of tuples,"zip(list_a, list_b)","{'list_a': ['list[int]', 'list[str]', 'list[bool]'], 'list_b': ['list[int]', 'list[str]', 'list[bool]']}",<class 'zip'>
 merge lists `a` and `a` into a list of tuples,"list(zip(a, b))","{'a': ['list[int]', 'list[str]', 'list[bool]'], 'b': ['list[int]', 'list[str]', 'list[bool]']}",<class 'list'>
-Can I sort text by its numeric value in Python?,"sorted(list(mydict.items()), key=lambda a: map(int, a[0].split('.')))","{'mydict': ['int-str-dict']}",<class 'list'>
 remove parentheses and text within it in string `filename`,"re.sub('\\([^)]*\\)', '', filename)","{'filename': ['str', 'int-str']}",<class 'str'>
 Check if string 'a b' only contains letters and spaces,"""""""a b"""""".replace(' ', '').isalpha()",{},<class 'bool'>
 sum each element `x` in list `first` with element `y` at the same index in list `second`.,"[(x + y) for x, y in zip(first, second)]","{'first': ['list[int]'], 'second': ['list[int]']}",<class 'list'>
@@ -652,8 +651,8 @@ create a list with the characters of a string `5+6`,list('5+6'),{},<class 'list'
 convert dictionary `dict` into a flat list,([y for x in list(dict.items()) for y in x]),"{'dict': ['dict']}",<class 'list'>
 Convert a dictionary `dict` into a list with key and values as list items.,[y for x in list(dict.items()) for y in x],"{'dict': ['dict']}",<class 'list'>
 create a flat dictionary by summing values associated with similar keys in each dictionary of list `dictlist`,"dict((key, sum(d[key] for d in dictList)) for key in dictList[0])","{'dictList': ['list[dict]']}",<class 'dict'>
-Converting string lists `s` to float list,floats = [float(x) for x in s.split()],"{'s': ['int-str']}",<class 'list'>
-Converting string lists `s` to float list,"floats = map(float, s.split())","{'s': ['int-str']}",<class 'map'>
+Converting string input of numbers `s` to float list,floats = [float(x) for x in s.split()],"{'s': ['int-str']}",<class 'list'>
+Converting string input of numbers `s` to float list,"floats = map(float, s.split())","{'s': ['int-str']}",<class 'map'>
 check if string `one` exists in the values of dictionary `d`,'one' in list(d.values()),"{'d': ['dict']}",<class 'bool'>
 Check if value 'one' is among the values of dictionary `d`,'one' in iter(d.values()),"{'d': ['dict']}",<class 'bool'>
 create a dictionary using two lists`x` and `y`,"dict(zip(x, y))","{'x': ['list[str]', 'list[int]', 'list[bool]', 'list[tuple]'], 'y': ['list[str]', 'list[int]', 'list[bool]', 'list[tuple]']}",<class 'dict'>
@@ -742,7 +741,6 @@ insert spaces before capital letters in string `text`,"re.sub('([a-z](?=[A-Z])|[
 print unicode string `ex\xe1mple` in uppercase,('ex\xe1mple'.upper()),{},<class 'str'>
 get last element of string splitted by '\\' from list of strings `list_dirs`,[l.split('\\')[-1] for l in list_dirs],"{'list_dirs': ['list[str]']}",<class 'list'>
 combine two sequences into a dictionary,"dict(zip(keys, values))","{'keys': ['list[int]', 'list[str]', 'list[bool]'], 'values': ['list[int]', 'list[str]', 'list[bool]']}",<class 'dict'>
-customize the time format in python logging,formatter = logging.Formatter('%(asctime)s;%(levelname)s;%(message)s'),{},<class 'logging.Formatter'>
 Replace comma with dot in a string `original_string` using regex,"new_string = re.sub('""(\\d+),(\\d+)""', '\\1.\\2', original_string)","{'original_string': ['str', 'int-str']}",<class 'str'>
 remove multiple spaces in a string `foo`,""""""" """""".join(foo.split())","{'foo': ['str', 'int-str']}",<class 'str'>
 convert decimal 8 to a list of its binary values,list('{0:0b}'.format(8)),{},<class 'list'>
@@ -931,8 +929,8 @@ round number 1.005 up to 2 decimal places,"round(1.005, 2)",{},<class 'float'>
 convert values in dictionary `d` into integers,"{k: int(v) for k, v in d.items()}","{'d': ['dict']}",<class 'dict'>
 sum elements at the same index of each list in list `lists`,"map(sum, zip(*lists))","{'lists': ['nested-list']}",<class 'map'>
 convert a string `s` containing hex bytes to a hex string,binascii.a2b_hex(s),"{'s': ['int-str']}",<class 'bytes'>
-remove identical items from list `my_list` and sort it alphabetically,sorted(set(my_list)),"{'my_list': ['list[int]', 'list[str]', 'list[bool]']}",<class 'list'>
-find the index of the element with the maximum value from a list 'a'.,"max(enumerate(a), key=lambda x: x[1])[0]","{'a': ['list[int]', 'list[str]', 'list[bool]']}",<class 'int'>
+remove identical items from list `my_list` and sort it alphabetically,sorted(set(my_list)),"{'my_list': ['list[str]']}",<class 'list'>
+find the index of the element with the maximum value from a list 'a'.,"max(enumerate(a), key=lambda x: x[1])[0]","{'a': ['list[int]']}",<class 'int'>
 python regex for hyphenated words in `text`,"re.findall('\\w+(?:-\\w+)+', text)","{'text': ['str', 'int-str']}",<class 'list'>
 Get `3` unique items from a list,"random.sample(list(range(1, 16)), 3)",{},<class 'list'>
 sort list `strings` in alphabetical order based on the letter after percent character `%` in each element,"strings.sort(key=lambda str: re.sub('.*%(.).*', '\\1', str))",{'strings': ['list[str]']},<class 'NoneType'>

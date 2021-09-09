@@ -83,7 +83,7 @@ add character '@' after word 'get' in string `text`,"text = re.sub('(\\bget\\b)'
 "update dictionary `b`, overwriting values where keys are identical, with contents of dictionary `d`",b.update(d),2
 add unicode string '1' to UTF-8 decoded string '\xc2\xa3',('\xc2\xa3' + '1'),1
 lower-case the string obtained by replacing the occurrences of regex pattern '(?<=[a-z])([A-Z])' in string `s` with replacement '-\\1',"re.sub('(?<=[a-z])([A-Z])', '-\\1', s).lower()",1
-format a string `num` using string formatting,"""""""{0:.3g}"""""".format(num)",1
+format an integer `num` using string formatting,"""""""{0:.3g}"""""".format(num)",1
 convert radians 1 to degrees,math.cos(math.radians(1)),3
 count the number of integers in list `a`,"sum(isinstance(x, int) for x in a)",0
 replacing  '\u200b' with '*' in a string  using regular expressions,"'used\u200b'.replace('\u200b', '*')",1
@@ -463,7 +463,6 @@ Print string `t` with proper unicode representations,(t.decode('unicode_escape')
 Normalize string `str` from 'cp1252' code to 'utf-8' code,(str.encode('cp1252').decode('utf-8').encode('cp1252').decode('utf-8')),1
 merge lists `list_a` and `list_b` into a list of tuples,"zip(list_a, list_b)",0
 merge lists `a` and `a` into a list of tuples,"list(zip(a, b))",0
-Can I sort text by its numeric value in Python dictionary `my_dict`?,"sorted(list(mydict.items()), key=lambda a: map(int, a[0].split('.')))",2
 remove parentheses and text within it in string `filename`,"re.sub('\\([^)]*\\)', '', filename)",1
 Check if string 'a b' only contains letters and spaces,"""""""a b"""""".replace(' ', '').isalpha()",1
 sum each element `x` in list `first` with element `y` at the same index in list `second`.,"[(x + y) for x, y in zip(first, second)]",0
@@ -713,7 +712,6 @@ insert spaces before capital letters in string `text`,"re.sub('([a-z](?=[A-Z])|[
 print unicode string `ex\xe1mple` in uppercase,('ex\xe1mple'.upper()),1
 get last element of string splitted by '\\' from list of strings `list_dirs`,[l.split('\\')[-1] for l in list_dirs],0
 combine two sequences into a dictionary,"dict(zip(keys, values))",0
-customize the time format in python logging,formatter = logging.Formatter('%(asctime)s;%(levelname)s;%(message)s'),1
 Replace comma with dot in a string `original_string` using regex,"new_string = re.sub('""(\\d+),(\\d+)""', '\\1.\\2', original_string)",1
 remove multiple spaces in a string `foo`,""""""" """""".join(foo.split())",1
 convert decimal 8 to a list of its binary values,"list('{0:0b}'.format(8))",3

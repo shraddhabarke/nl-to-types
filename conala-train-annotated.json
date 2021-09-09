@@ -2890,12 +2890,6 @@
       "question_id": 2407398
     },
     {
-      "intent": "Can I sort text by its numeric value in Python?",
-      "rewritten_intent": null,
-      "snippet": "sorted(list(mydict.items()), key=lambda a: map(int, a[0].split('.')))",
-      "question_id": 1534542
-    },
-    {
       "intent": "How can I remove text within parentheses with a regex?",
       "rewritten_intent": "remove parentheses and text within it in string `filename`",
       "snippet": "re.sub('\\\\([^)]*\\\\)', '', filename)",
@@ -4466,12 +4460,6 @@
       "rewritten_intent": "combine two sequences into a dictionary",
       "snippet": "dict(zip(keys, values))",
       "question_id": 579856
-    },
-    {
-      "intent": "How to Customize the time format for Python logging?",
-      "rewritten_intent": "customize the time format in python logging",
-      "snippet": "formatter = logging.Formatter('%(asctime)s;%(levelname)s;%(message)s')",
-      "question_id": 3220284
     },
     {
       "intent": "Python Regex replace",
