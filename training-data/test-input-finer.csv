@@ -222,7 +222,7 @@ delete all instances of a character 'i' in a string 'it is icy',"re.sub('i', '',
 How to delete all instances of a character in a string in python?,""""""""""""".join([char for char in 'it is icy' if char != 'i'])",<str>,2,0
 converting list of strings `intstringlist` to list of integer `nums`,nums = [int(x) for x in intstringlist],<str-list>,7,1
 round off the float that is the product of `2.52 * 100` and convert it to an int,int(round(2.51 * 100)),<float>,4,0
-Sum the corresponding decimal values for binary values of each boolean element in list `x`,"sum(1 << i for i, b in enumerate(x) if b)",<bool-list>,1
+Sum the corresponding decimal values for binary values of each boolean element in list `x`,"sum(1 << i for i, b in enumerate(x) if b)",<bool-list>,10,1
 Convert list of lists `data` into a flat list,"[y for x in data for y in (x if isinstance(x, list) else [x])]",<nested-list>,8,1
 "remove last comma character ',' in string `s`",""""""""""""".join(s.rsplit(',', 1))",<str>,2,1
 "find the string in `your_string` between two special characters ""["" and ""]""","re.search('\\[(.*)\\]', your_string).group(1)",<str>,2,1
