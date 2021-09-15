@@ -133,17 +133,17 @@ Extract brackets from string `s`,"brackets = re.sub('[^(){}[\\]]', '', s)",<str>
 remove duplicate elements from list 'L',"list(dict((x[0], x) for x in L).values())",<list>,6,1
 get the position of item 1 in `testlist`,"[i for (i, x) in enumerate(testlist) if (x == 1)]",<int-list>,20,1
 get the position of item 1 in `testlist`,"[i for (i, x) in enumerate(testlist) if (x == 1)]",<int-list>,20,1
-get the position of item 1 in `testlist`,"for i in [i for (i, x) in enumerate(testlist) if (x == 1)]:\npass",<int-list>,20,1
-get the position of item 1 in `testlist`,"for i in (i for (i, x) in enumerate(testlist) if (x == 1)):\npass",<int-list>,20,1
-get the position of item 1 in `testlist`,"gen = (i for (i, x) in enumerate(testlist) if (x == 1))\nfor i in gen:pass",<int-list>,20,1
+get the position of item 1 in `testlist`,"[i for (i, x) in enumerate(testlist) if (x == 1)]",<int-list>,20,1
+get the position of item 1 in `testlist`,"[i for (i, x) in enumerate(testlist) if (x == 1)]",<int-list>,20,1
+get the position of item 1 in `testlist`,"[i for (i, x) in enumerate(testlist) if (x == 1)]",<int-list>,20,1
 get the position of item `element` in list `testlist`,(testlist.index(element)),<list>,6,1
-get the position of item `element` in list `testlist`,"try:\n(testlist.index(element))\nexcept ValueError:\npass",<list>,6,1
+get the position of item `element` in list `testlist`,"(testlist.index(element))",<list>,6,1
 find the first element of the tuple with the maximum second element in a list of tuples `lis`,"max(lis, key=lambda item: item[1])[0]",<tuple-list>,19,1
 get the item at index 0 from the tuple that has maximum value at index 1 in list `lis`,"max(lis, key=itemgetter(1))[0]",<tuple-list>,19,1
 convert list of tuples `L` to a string,""""""", """""".join('(' + ', '.join(i) + ')' for i in L)",<tuple-list>,19,1
 convert a list  into a generator object,"(n for n in [1, 2, 3, 5])",<list>,6,0
 remove elements from list `oldlist` that have an index number mentioned in list `removelist`,"newlist = [v for i, v in enumerate(oldlist) if i not in removelist]",<list>,6,2
-"convert tuple of tuples `(('aa',), ('bb',), ('cc',))` to tuple","from functools import reduce\nreduce(lambda a, b: a + b, (('aa',), ('bb',), ('cc',)))",<tuple>,17,0
+"convert tuple of tuples `(('aa',), ('bb',), ('cc',))` to tuple","map(lambda a: a[0], (('aa',), ('bb',), ('cc',)))",<tuple>,17,0
 "convert tuple of tuples `(('aa',), ('bb',), ('cc',))` to list in one line","map(lambda a: a[0], (('aa',), ('bb',), ('cc',)))",<tuple>,17,0
 "unzip the list `[('a', 1), ('b', 2), ('c', 3), ('d', 4)]`","zip(*[('a', 1), ('b', 2), ('c', 3), ('d', 4)])",<tuple-list>,19,0
 "unzip the list `[('a', 1), ('b', 2), ('c', 3), ('d', 4)]`","zip(*[('a', 1), ('b', 2), ('c', 3), ('d', 4)])",<tuple-list>,19,0
