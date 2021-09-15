@@ -101,6 +101,7 @@
       "intent": "Determining the unmatched portion of a string using a regex in Python",
       "rewritten_intent": "split string 'Words, words, words.' using a regex '(\\\\W+)'",
       "snippet": "re.split('(\\\\W+)', 'Words, words, words.')",
+      "model_solution": "re.split('(\\W )', 'Words, words, words.')",
       "question_id": 2195340
     },
     {
@@ -191,6 +192,7 @@
       "intent": "Getting the date of 7 days ago from current date in python",
       "rewritten_intent": "get the date 7 days before the current date",
       "snippet": "(datetime.datetime.now() - datetime.timedelta(days=7)).date()",
+      "model_solution": "datetime.datetime.now()",
       "question_id": 20573459
     },
     {
@@ -274,18 +276,21 @@
       "intent": "How to print an entire list while not starting by the first item",
       "rewritten_intent": "print a list `l` and move first 3 elements to the end of the list",
       "snippet": "print(l[3:] + l[:3])",
+      "model_solution": "print('<unk> %s, <unk>' % (1, 2, 3))",
       "question_id": 34280147
     },
     {
       "intent": "Create random list of integers in Python",
       "rewritten_intent": "create a random list of integers",
       "snippet": "[int(1000 * random.random()) for i in range(10000)]",
+      "model_solution": "[random.randint(0, 9) for _ in range(10)]",
       "question_id": 4172131
     },
     {
       "intent": "Using %f with strftime() in Python to get microseconds",
       "rewritten_intent": null,
       "snippet": "datetime.datetime.now().strftime('%H:%M:%S.%f')",
+      "model_solution": "datetime.datetime.strptime('<unk>', '%.2f')",
       "question_id": 6677332
     },
     {
@@ -320,6 +325,7 @@
       "intent": "Python match string if it does not start with X",
       "rewritten_intent": "search for string that matches regular expression pattern '(?<!Distillr)\\\\\\\\AcroTray\\\\.exe' in string 'C:\\\\SomeDir\\\\AcroTray.exe'",
       "snippet": "re.search('(?<!Distillr)\\\\\\\\AcroTray\\\\.exe', 'C:\\\\SomeDir\\\\AcroTray.exe')",
+      "model_solution": "re.findall('(?<!Distillr)\\\\AcroTray\\.exe', 'C:\\SomeDir\\AcroTray.exe')",
       "question_id": 15534223
     },
     {
@@ -347,12 +353,14 @@
       "intent": "Python: trying to lower a string and remove non-alphanumeric characters aside from space",
       "rewritten_intent": "lower a string `text` and remove non-alphanumeric characters aside from space",
       "snippet": "re.sub('[^\\\\sa-zA-Z0-9]', '', text).lower().strip()",
+      "model_solution": "re.sub('[^0-9a-zA-Z]+', '', text)",
       "question_id": 30693804
     },
     {
       "intent": "Python: trying to lower a string and remove non-alphanumeric characters aside from space",
       "rewritten_intent": "remove all non-alphanumeric characters except space from a string `text` and lower it",
       "snippet": "re.sub('(?!\\\\s)[\\\\W_]', '', text).lower().strip()",
+      "model_solution": "return ' '.join(c for c in text if c.isdigit())",
       "question_id": 30693804
     },
     {
@@ -380,6 +388,7 @@
       "intent": "Replace a substring when it is a separate word",
       "rewritten_intent": "Replace a separate word 'H3' by 'H1' in a string 'text'",
       "snippet": "re.sub('\\\\bH3\\\\b', 'H1', text)",
+      "model_solution": "\"\"\" \"\"\".join(map(''.join, map(str.replace, 'H3', 'H1')))",
       "question_id": 18785032
     },
     {
@@ -498,6 +507,7 @@
       "intent": "Splitting a string with repeated characters into a list using regex",
       "rewritten_intent": "split a string `s` with into all strings of repeated characters",
       "snippet": "[m.group(0) for m in re.finditer('(\\\\d)\\\\1*', s)]",
+      "model_solution": "print(re.findall('<unk>', s))",
       "question_id": 22882922
     },
     {
@@ -525,6 +535,7 @@
       "intent": "Ending with a for loop in python",
       "rewritten_intent": "Iterate ove list `[1, 2, 3]` using list comprehension",
       "snippet": "print([item for item in [1, 2, 3]])",
+      "model_solution": "[list(x) for x in zip(*[1, 2, 3])]",
       "question_id": 22365172
     },
     {
@@ -566,18 +577,21 @@
       "intent": "How do you extract a url from a string using python?",
       "rewritten_intent": "extract a url from a string `myString`",
       "snippet": "print(re.findall('(https?://[^\\\\s]+)', myString))",
+      "model_solution": "urllib.parse.quote(myString.headers())",
       "question_id": 9760588
     },
     {
       "intent": "How do you extract a url from a string using python?",
       "rewritten_intent": "extract a url from a string `myString`",
       "snippet": "print(re.search('(?P<url>https?://[^\\\\s]+)', myString).group('url'))",
+      "model_solution": "urllib.parse.quote(myString.headers())",
       "question_id": 9760588
     },
     {
       "intent": "Remove all special characters, punctuation and spaces from string",
       "rewritten_intent": "remove all special characters, punctuation and spaces from a string `mystring` using regex",
       "snippet": "re.sub('[^A-Za-z0-9]+', '', mystring)",
+      "model_solution": " re.sub('<unk>', '', mystring)",
       "question_id": 5843518
     },
     {
@@ -676,12 +690,14 @@
       "intent": "Split by suffix with Python regular expression",
       "rewritten_intent": "split string `s` by words that ends with 'd'",
       "snippet": "re.findall('\\\\b(\\\\w+)d\\\\b', s)",
+      "model_solution": "re.split('<unk>', s)",
       "question_id": 31371879
     },
     {
       "intent": "python's re: return True if regex contains in the string",
       "rewritten_intent": "return `True` if string `foobarrrr` contains regex `ba[rzd]`",
       "snippet": "bool(re.search('ba[rzd]', 'foobarrrr'))",
+      "model_solution": "re.match('ba[rzd]', foobarrrr).start()",
       "question_id": 9012008
     },
     {
@@ -842,6 +858,7 @@
       "intent": "printing tab-separated values of a list",
       "rewritten_intent": "print elements of list `list` seperated by tabs `\\t`",
       "snippet": "print('\\t'.join(map(str, list)))",
+      "model_solution": "print(' '.join(map(str, list)))",
       "question_id": 4048964
     },
     {
@@ -855,12 +872,14 @@
       "intent": "Regex, find pattern only in middle of string",
       "rewritten_intent": "regex, find \"n\"s only in the middle of string `s`",
       "snippet": "re.findall('n(?<=[^n]n)n+(?=[^n])(?i)', s)",
+      "model_solution": "print(re.findall('i', s))",
       "question_id": 35622945
     },
     {
       "intent": "how to show Percentage in python",
       "rewritten_intent": "display the float `1/3*100` as a percentage",
       "snippet": "print('{0:.0f}%'.format(1.0 / 3 * 100))",
+      "model_solution": "struct.unpack('f', '{0:.2f}'.format(float('1/3*100')))",
       "question_id": 5306756
     },
     {
@@ -895,6 +914,7 @@
       "intent": "Regular Expression to find brackets in a string",
       "rewritten_intent": "Extract brackets from string `s`",
       "snippet": "brackets = re.sub('[^(){}[\\\\]]', '', s)",
+      "model_solution": "re.findall('#(\\w+)', 's')",
       "question_id": 30766151
     },
     {
@@ -1083,6 +1103,7 @@
       "intent": "Python split a string using regex",
       "rewritten_intent": null,
       "snippet": "re.findall('(.+?):(.+?)\\\\b ?', text)",
+      "model_solution": "re.findall('\\S+', str1)",
       "question_id": 16330838
     },
     {
@@ -1110,30 +1131,35 @@
       "intent": "regex to get all text outside of brackets",
       "rewritten_intent": "get all text that is not enclosed within square brackets in string `example_str`",
       "snippet": "re.findall('(.*?)\\\\[.*?\\\\]', example_str)",
+      "model_solution": "re.findall('\\[(.*?)\\]', example_str)",
       "question_id": 17284947
     },
     {
       "intent": "regex to get all text outside of brackets",
       "rewritten_intent": "Use a regex to get all text in a string `example_str` that is not surrounded by square brackets",
       "snippet": "re.findall('(.*?)(?:\\\\[.*?\\\\]|$)', example_str)",
+      "model_solution": "re.findall('\\[(.*?)\\]', example_str)",
       "question_id": 17284947
     },
     {
       "intent": "Matching multiple regex patterns with the alternation operator?",
       "rewritten_intent": "get whatever is between parentheses as a single match, and any char outside as an individual match in string '(zyx)bc'",
       "snippet": "re.findall('\\\\(.+?\\\\)|\\\\w', '(zyx)bc')",
+      "model_solution": "print(' '.join(re.findall('«([\\s\\S]*?)»', (zyx)bc)))",
       "question_id": 14182339
     },
     {
       "intent": "Matching multiple regex patterns with the alternation operator?",
       "rewritten_intent": "match regex '\\\\((.*?)\\\\)|(\\\\w)' with string '(zyx)bc'",
       "snippet": "re.findall('\\\\((.*?)\\\\)|(\\\\w)', '(zyx)bc')",
+      "model_solution": "re.match('\\((.*?)\\)|(\\w)', '(zyx)bc')",
       "question_id": 14182339
     },
     {
       "intent": "Matching multiple regex patterns with the alternation operator?",
       "rewritten_intent": "match multiple regex patterns with the alternation operator `|` in a string `(zyx)bc`",
       "snippet": "re.findall('\\\\(.*?\\\\)|\\\\w', '(zyx)bc')",
+      "model_solution": "print(' '.join(filter(str.isdigit, '(zyx)bc')))",
       "question_id": 14182339
     },
     {
@@ -1161,6 +1187,7 @@
       "intent": "Partitioning a string in Python by a regular expression",
       "rewritten_intent": "split a string into a list of words and whitespace",
       "snippet": "re.split('(\\\\W+)', s)",
+      "model_solution": "re.findall('<unk>', '<unk>')",
       "question_id": 5932059
     },
     {
@@ -1251,24 +1278,28 @@
       "intent": "How to remove symbols from a string with Python?",
       "rewritten_intent": "remove symbols from a string `s`",
       "snippet": "re.sub('[^\\\\w]', ' ', s)",
+      "model_solution": "s.replace('', '')",
       "question_id": 875968
     },
     {
       "intent": "Regex and Octal Characters",
       "rewritten_intent": "Find octal characters matches from a string `str` using regex",
       "snippet": "print(re.findall(\"'\\\\\\\\[0-7]{1,3}'\", str))",
+      "model_solution": "re.findall('\n\\s*\n', str)",
       "question_id": 34750084
     },
     {
       "intent": "Python split string based on regex",
       "rewritten_intent": "split string `input` based on occurrences of regex pattern '[ ](?=[A-Z]+\\\\b)'",
       "snippet": "re.split('[ ](?=[A-Z]+\\\\b)', input)",
+      "model_solution": "re.split('[ ](?=[A-Z] \\b)', input)",
       "question_id": 13209288
     },
     {
       "intent": "Python split string based on regex",
       "rewritten_intent": "Split string `input` at every space followed by an upper-case letter",
       "snippet": "re.split('[ ](?=[A-Z])', input)",
+      "model_solution": "input.split('')",
       "question_id": 13209288
     },
     {
@@ -1471,12 +1502,14 @@
       "intent": "printing double quotes around a variable",
       "rewritten_intent": "Print a string `word` with string format",
       "snippet": "print('\"{}\"'.format(word))",
+      "model_solution": "print('<unk>'.format(word))",
       "question_id": 20056548
     },
     {
       "intent": "Python concat string with list",
       "rewritten_intent": "join a list of strings `list` using a space ' '",
       "snippet": "\"\"\" \"\"\".join(list)",
+      "model_solution": "print(' '.join(list))",
       "question_id": 8546245
     },
     {
@@ -1497,6 +1530,7 @@
       "intent": "How to delete all instances of a character in a string in python?",
       "rewritten_intent": "delete all instances of a character 'i' in a string 'it is icy'",
       "snippet": "re.sub('i', '', 'it is icy')",
+      "model_solution": "re.sub('<unk>', '', it is icy)",
       "question_id": 22187233
     },
     {
@@ -1552,6 +1586,7 @@
       "intent": "How do I find the string between two special characters?",
       "rewritten_intent": "find the string in `your_string` between two special characters \"[\" and \"]\"",
       "snippet": "re.search('\\\\[(.*)\\\\]', your_string).group(1)",
+      "model_solution": "print(' '.join(filter(months, ord(your_string))))",
       "question_id": 14716342
     },
     {
@@ -1586,6 +1621,7 @@
       "intent": "Replacing characters in a regex",
       "rewritten_intent": "replace dot characters  '.' associated with ascii letters in list `s` with space ' '",
       "snippet": "[re.sub('(?<!\\\\d)\\\\.(?!\\\\d)', ' ', i) for i in s]",
+      "model_solution": "\"\"\" \"\"\".replace(',', '')",
       "question_id": 35044115
     },
     {
@@ -1641,6 +1677,7 @@
       "intent": "How to replace only part of the match with python re.sub",
       "rewritten_intent": "insert `_suff` before the file extension in `long.file.name.jpg` or replace `_a` with `suff` if it precedes the extension.",
       "snippet": "re.sub('(\\\\_a)?\\\\.([^\\\\.]*)$', '_suff.\\\\2', 'long.file.name.jpg')",
+      "model_solution": "suff.append([(x + y) for x, y in map(suff, _a.split('_a'))])",
       "question_id": 2763750
     },
     {
@@ -1668,6 +1705,7 @@
       "intent": "Python Regex - checking for a capital letter with a lowercase after",
       "rewritten_intent": "python regex - check for a capital letter with a following lowercase in string `string`",
       "snippet": "re.sub('^[A-Z0-9]*(?![a-z])', '', string)",
+      "model_solution": "re.sub('<unk>', '', string).lower()",
       "question_id": 21805490
     },
     {
@@ -1688,12 +1726,14 @@
       "intent": "Python regex findall numbers and dots",
       "rewritten_intent": "Find all numbers and dots from a string `text` using regex",
       "snippet": "re.findall('Test([0-9.]*[0-9]+)', text)",
+      "model_solution": "re.findall('1', 'text')",
       "question_id": 356483
     },
     {
       "intent": "Python regex findall numbers and dots",
       "rewritten_intent": "python regex  to find all numbers and dots from 'text'",
       "snippet": "re.findall('Test([\\\\d.]*\\\\d+)', text)",
+      "model_solution": "\"\"\" \"\"\".join(map(str, re.findall(\"[A-Za-z']+\", text)))",
       "question_id": 356483
     },
     {
@@ -1707,6 +1747,7 @@
       "intent": "how to create a file name with the current date & time in python?",
       "rewritten_intent": "create a datetime with the current date & time",
       "snippet": "datetime.datetime.now()",
+      "model_solution": "datetime.datetime.combine(datetime.datetime.now(), datetime.datetime.now())",
       "question_id": 10607688
     },
     {
